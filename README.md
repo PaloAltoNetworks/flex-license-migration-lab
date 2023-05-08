@@ -162,7 +162,7 @@ In the next steps you will create a Serialnumber for your previous created Panor
 3. Now Search for your previous created Azure Deployment Profile [here](#321-azure-deployment-profile)
 4. Click on the 3 dots and on **Provision Panorama**
    ![Screenshot 2023-05-08 at 14 01 29](https://user-images.githubusercontent.com/30934288/236821233-4bd1203c-dfb7-4c7f-8a7b-6c332d5da645.png)
-5. In the new window click on **Provision**
+5. In the new window click on **Provision** <br/>
    ![Screenshot 2023-05-08 at 14 03 38](https://user-images.githubusercontent.com/30934288/236821269-23c45ffb-645d-4c3f-937a-22dff931cd8f.png)
 6. Once the window is closed repeat the steps from step 3
    ![Screenshot 2023-05-08 at 14 01 29](https://user-images.githubusercontent.com/30934288/236821410-0e3495d1-2245-41ff-804c-6604ed03abe5.png)
