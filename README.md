@@ -6,9 +6,15 @@
 - [1. Palo Alto Networks Professional Service Flex Licensing Migration Lab](#1-palo-alto-networks-professional-service-flex-licensing-migration-lab)
   - [1.1 Overview](#11-overview)
   - [1.2 Covered Secaniros](#12-covered-secaniros)
-- [2 Deploy Panorama](#2-deploy-panorama)
+- [2 Deploy Panorama in Microsoft Azure](#2-deploy-panorama-in-microsoft-azure)
   - [2.1 Deploy Azure Resource Group](#21-deploy-azure-resource-group)
   - [2.2 Deploy Panorama in Azure](#22-deploy-panorama-in-azure)
+- [3. Customer Support Portal](#3-customer-support-portal)
+  - [3.1 Login To Customer Support Portal](#31-login-to-customer-support-portal)
+  - [3.2 Create Fixed Deployment Profiles](#32-create-fixed-deployment-profiles)
+    - [3.2.1 Azure Deployment Profile](#321-azure-deployment-profile)
+    - [3.2.2 AWS Deployment Profile](#322-aws-deployment-profile)
+    - [3.2.1 GCP Deployment Profile](#321-gcp-deployment-profile)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -47,7 +53,7 @@ The following Secanrios and Lab activies are covered
 
 <br/>
 
-# 2 Deploy Panorama
+# 2 Deploy Panorama in Microsoft Azure
 For this workshop you will create a first a Panorama before we deploy the Software Firewall in other Public Cloud Providers. The Panorama will have direct internet access. the Panorama is not connected to any other internal Ressource in Azure.
 <br/>
 
@@ -57,7 +63,7 @@ For this workshop you will create a first a Panorama before we deploy the Softwa
 1. Open Azure Cloud Shell
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/AzureCLI.png)
 1. In Cloud Shell execute the following command but change before the values [StudentRGName] and [Location]
-   Available Regions are: North Europe, East US, UK South, UAE North, Australia Central
+   Available Regions are: **North Europe, East US, UK South, UAE North, Australia Central**
    ```
    az group create --name [StudentRGName] --location [Location]
    ```
@@ -90,3 +96,54 @@ az vm create -g [StudentRGName] -n [VM-Name] --authentication-type password --ad
 9. Login to your Panorama via the Public IP associated to it. The Instructor will provide you the Usernam and Password.
    1.  https://[Public-IP]
    ![Screenshot 2023-04-26 at 17 08 58](https://user-images.githubusercontent.com/30934288/234621053-6a3c2eb5-fc13-4af5-b40a-67a679aae773.png)
+
+Congratulations!! You have succesfully deploye a Panorama in Microsoft Azure.
+<br/>
+
+# 3. Customer Support Portal
+In the following Lab section we will go to the Customer support portal (CSP) to create several Deployment Profiles to perform the Migration from NON-Flex license model Flex License Model
+
+## 3.1 Login To Customer Support Portal
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+
+## 3.2 Create Fixed Deployment Profiles
+Now you will create several Deployment Profiles in the Customer Support Portal to cover the migration process from NON-Flex to Flex (Fixed Deployment Profile).
+
+### 3.2.1 Azure Deployment Profile
+1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+2. Select the following as shown on the picture below and click Next<br/>
+   ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
+3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "Azure-Fixed-[StudentName]"
+   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
+4. Click "Create Deployment Profile"
+5. Verify that your Deployment Profile is successfully created
+   ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
+<br/>
+
+### 3.2.2 AWS Deployment Profile
+1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+2. Select the following as shown on the picture below and click Next<br/>
+   ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
+3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "AWS-Fixed-[StudentName]"
+   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
+4. Click "Create Deployment Profile"
+5. Verify that your Deployment Profile is successfully created
+   ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
+<br/>
+
+### 3.2.1 GCP Deployment Profile
+1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+2. Select the following as shown on the picture below and click Next<br/>
+   ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
+3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "GCP-Fixed-[StudentName]"
+   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
+4. Click "Create Deployment Profile"
+5. Verify that your Deployment Profile is successfully created
+   ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
+<br/>
