@@ -158,16 +158,16 @@ In the next steps you will create a Serialnumber for your previous created Panor
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
 2. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits -> Details
-   Picture
+   ![Screenshot 2023-05-08 at 13 57 29](https://user-images.githubusercontent.com/30934288/236821175-3277edbc-d472-4e9f-b428-1831ba25b73b.png)
 3. Now Search for your previous created Azure Deployment Profile [here](#321-azure-deployment-profile)
 4. Click on the 3 dots and on **Provision Panorama**
-   Picture
+   ![Screenshot 2023-05-08 at 14 01 29](https://user-images.githubusercontent.com/30934288/236821233-4bd1203c-dfb7-4c7f-8a7b-6c332d5da645.png)
 5. In the new window click on **Provision**
-   Picture
+   ![Screenshot 2023-05-08 at 14 03 38](https://user-images.githubusercontent.com/30934288/236821269-23c45ffb-645d-4c3f-937a-22dff931cd8f.png)
 6. Once the window is closed repeat the steps from step 3
-   Picture
+   ![Screenshot 2023-05-08 at 14 01 29](https://user-images.githubusercontent.com/30934288/236821410-0e3495d1-2245-41ff-804c-6604ed03abe5.png)
 7. Now you can see a Serialnumber in the Window. Copy and Paste the Serialnumber
-   picture
+   ![Screenshot 2023-05-08 at 14 06 13](https://user-images.githubusercontent.com/30934288/236821362-29f37909-874f-44ce-8f5a-8976f2d6c735.png)
 8. You can close the window by clicking **Cancel**
 
 ### 3.3.2 License Panorama
