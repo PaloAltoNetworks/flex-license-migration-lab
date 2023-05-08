@@ -15,6 +15,9 @@
     - [3.2.1 Azure Deployment Profile](#321-azure-deployment-profile)
     - [3.2.2 AWS Deployment Profile](#322-aws-deployment-profile)
     - [3.2.3 GCP Deployment Profile](#323-gcp-deployment-profile)
+  - [3.3 License Panorama](#33-license-panorama)
+    - [3.3.1 Provision Panorama Serialnumber](#331-provision-panorama-serialnumber)
+    - [3.3.2 License Panorama](#332-license-panorama)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -147,3 +150,32 @@ Now you will create several Deployment Profiles in the Customer Support Portal t
 5. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
 <br/>
+
+## 3.3 License Panorama
+In the next steps you will create a Serialnumber for your previous created Panorama with the Flex License Credits
+
+### 3.3.1 Provision Panorama Serialnumber
+
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits -> Details
+   Picture
+3. Now Search for your previous created Azure Deployment Profile [here](#321-azure-deployment-profile)
+4. Click on the 3 dots and on **Provision Panorama**
+   Picture
+5. In the new window click on **Provision**
+   Picture
+6. Once the window is closed repeat the steps from step 3
+   Picture
+7. Now you can see a Serialnumber in the Window. Copy and Paste the Serialnumber
+   picture
+8. You can close the window by clicking **Cancel**
+
+### 3.3.2 License Panorama
+As next we will License your Panorama with the Serialnumber you created above.
+
+1. Login to your Panorama https://[Public-IP]
+2. Copy the the Serialnummber you create on the CSP Portal and enter it under the Panorama Tab -> Setup -> Management -> General Settings
+   ![Screenshot 2023-05-03 at 10 40 41](https://user-images.githubusercontent.com/30934288/235870102-b21ae1db-3df3-451e-b97d-177fb0aac110.png)
+3. Hit OK and reload the UI. Check if a pending commit on the Panorama is needed. If yes, commit to Panorama.
+4. In the Panorama check if you can see a Serialnummber is associated to it
+   ![Screenshot 2023-04-28 at 10 42 49](https://user-images.githubusercontent.com/30934288/235103168-d62230df-38c1-43e4-862d-7fb8c52a9d1a.png)
