@@ -14,7 +14,7 @@
   - [3.2 Create Fixed Deployment Profiles](#32-create-fixed-deployment-profiles)
     - [3.2.1 Azure Deployment Profile](#321-azure-deployment-profile)
     - [3.2.2 AWS Deployment Profile](#322-aws-deployment-profile)
-    - [3.2.1 GCP Deployment Profile](#321-gcp-deployment-profile)
+    - [3.2.3 GCP Deployment Profile](#323-gcp-deployment-profile)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -136,7 +136,7 @@ Now you will create several Deployment Profiles in the Customer Support Portal t
    ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
 <br/>
 
-### 3.2.1 GCP Deployment Profile
+### 3.2.3 GCP Deployment Profile
 1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
    ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
 2. Select the following as shown on the picture below and click Next<br/>
