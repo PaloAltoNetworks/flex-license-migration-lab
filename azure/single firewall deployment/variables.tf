@@ -52,7 +52,19 @@ variable "common_vmseries_sku" {
   type        = string
 }
 
-variable "vm_series_version" {
+variable "vm_series_version_set1" {
+  description = "VMSeries PanOS Version"
+  default     = "10.1.0"
+  type        = string
+}
+
+variable "vm_series_version_set2" {
+  description = "VMSeries PanOS Version"
+  default     = "10.1.0"
+  type        = string
+}
+
+variable "vm_series_version_set3" {
   description = "VMSeries PanOS Version"
   default     = "10.1.0"
   type        = string
@@ -75,4 +87,16 @@ variable "firewall1" {
 }
 variable "firewall2" {
   default = "Firewall2"
+}
+variable "firewall3" {
+  default = "Firewall3"
+}
+variable "firewall4" {
+  default = "Firewall4"
+}
+variable "firewall5" {
+  default = "Firewall5"
+}
+variable "firewall6" {
+  default = "Firewall6"
 }

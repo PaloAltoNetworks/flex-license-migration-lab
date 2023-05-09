@@ -19,7 +19,7 @@ module "vnet" {
           access                     = "Allow"
           direction                  = "Inbound"
           priority                   = 100
-          protocol                   = "Tcp"
+          protocol                   = "*"
           source_port_range          = "*"
           source_address_prefixes    = var.allow_inbound_mgmt_ips
           destination_address_prefix = "*"
@@ -58,7 +58,7 @@ module "vmseries1" {
   username            = var.username
   password            = var.password
   img_sku             = var.common_vmseries_sku
-  img_version         = var.vm_series_version
+  img_version         = var.vm_series_version_set1
   avzones             = var.avzones
   bootstrap_options = join(",",
     [
@@ -69,7 +69,7 @@ module "vmseries1" {
   ])
   interfaces = [
     {
-      name             = "myfw-mgmt"
+      name             = "fw1-mgmt"
       subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
       create_public_ip = true
     },
@@ -85,7 +85,7 @@ module "vmseries2" {
   username            = var.username
   password            = var.password
   img_sku             = var.common_vmseries_sku
-  img_version         = var.vm_series_version
+  img_version         = var.vm_series_version_set1
   avzones             = var.avzones
   bootstrap_options = join(",",
     [
@@ -96,7 +96,115 @@ module "vmseries2" {
   ])
   interfaces = [
     {
-      name             = "myfw-mgmt"
+      name             = "fw2-mgmt"
+      subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
+      create_public_ip = true
+    },
+  ]
+}
+
+module "vmseries3" {
+  source = "../modules/vmseries"
+
+  location            = var.location
+  resource_group_name = azurerm_resource_group.this.name
+  name                = var.firewall3
+  username            = var.username
+  password            = var.password
+  img_sku             = var.common_vmseries_sku
+  img_version         = var.vm_series_version_set2
+  avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
+  interfaces = [
+    {
+      name             = "fw3-mgmt"
+      subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
+      create_public_ip = true
+    },
+  ]
+}
+
+module "vmseries4" {
+  source = "../modules/vmseries"
+
+  location            = var.location
+  resource_group_name = azurerm_resource_group.this.name
+  name                = var.firewall4
+  username            = var.username
+  password            = var.password
+  img_sku             = var.common_vmseries_sku
+  img_version         = var.vm_series_version_set2
+  avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
+  interfaces = [
+    {
+      name             = "fw4-mgmt"
+      subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
+      create_public_ip = true
+    },
+  ]
+}
+
+module "vmseries5" {
+  source = "../modules/vmseries"
+
+  location            = var.location
+  resource_group_name = azurerm_resource_group.this.name
+  name                = var.firewall5
+  username            = var.username
+  password            = var.password
+  img_sku             = var.common_vmseries_sku
+  img_version         = var.vm_series_version_set3
+  avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
+  interfaces = [
+    {
+      name             = "fw5-mgmt"
+      subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
+      create_public_ip = true
+    },
+  ]
+}
+
+module "vmseries6" {
+  source = "../modules/vmseries"
+
+  location            = var.location
+  resource_group_name = azurerm_resource_group.this.name
+  name                = var.firewall6
+  username            = var.username
+  password            = var.password
+  img_sku             = var.common_vmseries_sku
+  img_version         = var.vm_series_version_set3
+  avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
+  interfaces = [
+    {
+      name             = "fw6-mgmt"
       subnet_id        = lookup(module.vnet.subnet_ids, "subnet-mgmt", null)
       create_public_ip = true
     },

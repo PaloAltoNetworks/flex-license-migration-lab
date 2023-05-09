@@ -26,12 +26,13 @@
 
 ## 1.1 Overview
 
-The Following Lab guide will help you to understand how to migrate Non-Flex licensed Software Firewalls from Non-Flex license model (ELA, etc) to the new Flex License Model. It will also cover how to create Deployment profiles in the Customer Suport Portal (CSP) to cover several secanrios. The Lab will only cover Migration the in the following Public Cloud Providers.
-1. Microsoft Azure
-2. Amazon AWS
-3. Google Cloud (GCP)
+The Following Lab guide will help you to understand how to migrate Non-Flex licensed Software Firewalls from Non-Flex license model (ELA, etc) to the new Flex License Model. It will also cover how to create Deployment profiles in the Customer Suport Portal (CSP) to cover several secanrios. The Lab will only cover Migration use cases as listed below
+1. Standalone Firewall with Access to the CSP
+2. Standalone Firewall, No Access to the CSP
+3. Panorama-Managed Firewalls with Access to the CSP
+4. Panorama-Managed Firewalls, No Access to the CSP
 
-Private Cloud and other Public Cloud Providers will not be covered in the Lab.
+Private Cloud and other Public Cloud Providers will not be covered in the Lab.  The deployed firewall are running in PanOS 9.1, 10.0.3, 10.2
 
 <br/><br/>
 
