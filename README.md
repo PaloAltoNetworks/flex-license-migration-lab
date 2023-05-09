@@ -212,13 +212,13 @@ In the following chapter you will deploy several Software Firewalls in different
 9.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
 10. As next switch to the folder ```files``` and rename the ```init-cfg.sample.txt``` to ```init-cfg.txt``` using the ```mv``` command
 11. Modify the ```init-cfg.txt``` inside Cloud shell with the ```vi``` command. Make sure you added the same name of the Device Group and Template Stack you created in your Panorama.
-    
+The value for the varibles ```tplname``` and ```dgname``` can be found in the section [3.3.2 License Panorama / Create Device Group and Template](#332-license-panorama--create-device-group-and-template)    
   ```
    type=dhcp-client
    vm-auth-key=123456789012345   #Follow the fLink below to create/show the key
    panorama-server=10.1.2.3      #change it to the Public IP of your Panorama
-   tplname=my-stack              #change it to the Template Stack inside your Panorama
-   dgname=my-device-group        #change it to the Device Group inside your Panorama
+   tplname=my-stack              #change it to the Template Stack inside your Panorama Section [3.3.2]
+   dgname=my-device-group        #change it to the Device Group inside your Panorama Section [3.3.2]
    dhcp-send-hostname=yes
    dhcp-send-client-id=yes
    dhcp-accept-server-hostname=yes
@@ -226,15 +226,15 @@ In the following chapter you will deploy several Software Firewalls in different
   ```
  [LINK to Guide for the Key creation](https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/bootstrap-the-vm-series-firewall/generate-the-vm-auth-key-on-panorama) 
 
-11. As next in folder ```files``` and rename the ```authcodes.sample``` to ```authcodes``` using the ```mv``` command
-12. Modify the ```authcodes``` files with the ```vi``` command.
+12. As next in folder ```files``` and rename the ```authcodes.sample``` to ```authcodes``` using the ```mv``` command
+13. Modify the ```authcodes``` files with the ```vi``` command.
    ```
    XXXXXXX # Instructor will provide you the Key via Slack
    ```
 
-13.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
-14.  Move back to the ```single\ firewall\ deployment``` folder with the command ```cd..```
-15.  Once you made all your changes execute the Terraform code with following commands:
+14.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
+15.  Move back to the ```single\ firewall\ deployment``` folder with the command ```cd..```
+16.  Once you made all your changes execute the Terraform code with following commands:
     1.  ```terraform init```.
     2.  ```terraform plan```.
     3.  ```terraform apply``` once you get the prompet type ```yes```
@@ -256,7 +256,7 @@ In the following chapter you will deploy several Software Firewalls in different
 </details>
 <br/>
 
-16.  Once the ```terraform apply``` is completed you will see the following output<br/>
+17.  Once the ```terraform apply``` is completed you will see the following output<br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/Complete.png)
 
 ## 4.2. Validate Deployment
