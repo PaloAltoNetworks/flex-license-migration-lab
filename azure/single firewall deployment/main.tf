@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "this" {
   name     = var.resource_group_name
   location = var.location
 }
-
+#test
 # Generate a random password for VM-Series.
 resource "random_password" "this" {
   length           = 16
