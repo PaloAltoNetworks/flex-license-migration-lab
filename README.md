@@ -207,27 +207,35 @@ In the following chapter you will deploy several Software Firewalls in different
 
 9.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
 10. As next switch to the folder ```files``` and rename the ```init-cfg.sample.txt``` to ```init-cfg.txt``` using the ```mv``` command
-11. Modify the ```init-cfg.txt``` inside Cloud shell with the ```vi``` command. Make sure you added the same name of the Device Group and Template Stack you created in your Panorama. 
+11. Modify the ```init-cfg.txt``` inside Cloud shell with the ```vi``` command. Make sure you added the same name of the Device Group and Template Stack you created in your Panorama.
     
   ```
    type=dhcp-client
-   vm-auth-key=123456789012345
-   panorama-server=10.1.2.3
-   tplname=my-stack
-   dgname=my-device-group
+   vm-auth-key=123456789012345   #Follow the fLink below to create/show the key
+   panorama-server=10.1.2.3      #change it to the Public IP of your Panorama
+   tplname=my-stack              #change it to the Template Stack inside your Panorama
+   dgname=my-device-group        #change it to the Device Group inside your Panorama
    dhcp-send-hostname=yes
    dhcp-send-client-id=yes
    dhcp-accept-server-hostname=yes
    dhcp-accept-server-domain=yes
   ```
-11. Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
-12. Move back to the ```vmseries_scaleset``` with the command ```cd..```
-13. Once you made all your changes execute the Terraform code with following commands:
+ [LINK to Guide for the Key creation](https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/bootstrap-the-vm-series-firewall/generate-the-vm-auth-key-on-panorama) 
+
+11. As next in folder ```files``` and rename the ```authcodes.sample``` to ```authcodes``` using the ```mv``` command
+12. Modify the ```authcodes``` files with the ```vi``` command.
+   ```
+   XXXXXXX # Instructor will provide you the Key via Slack
+   ```
+
+13.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
+14.  Move back to the ```single\ firewall\ deployment``` folder with the command ```cd..```
+15.  Once you made all your changes execute the Terraform code with following commands:
     1.  ```terraform init```.
     2.  ```terraform plan```.
     3.  ```terraform apply``` once you get the prompet type ```yes```
 
-**Important!** The complete deployment will take up to 30 Minutes after the completing the Terraform Apply. It is a good time for a break
+**Important!** The complete deployment will take up to 10 Minutes after the completing the Terraform Apply. It is a good time for a break
 
 <details>
   <summary style="color:black">Expand For Details</summary>
@@ -244,7 +252,7 @@ In the following chapter you will deploy several Software Firewalls in different
 </details>
 <br/>
 
-14.  Once the ```terraform apply``` is completed you will see the following output<br/>
+16.  Once the ```terraform apply``` is completed you will see the following output<br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/Complete.png)
 
 ## 4.2. Validate Deployment
@@ -253,7 +261,7 @@ In the following chapter you will deploy several Software Firewalls in different
 - Validate Deployment
 
 1.  Login into Panorama Public IP
-2.  Once you logged into the Panorama Navigate to the **Panorama** tab validate you can see your newly deployed Firewalls **(The deployment and bootstrapping process can take up to 30-45 minutes)**. If the Deployment was succesful you will see the following output in **Panorama -> Managed Devices -> Summary**
+2.  Once you logged into the Panorama Navigate to the **Panorama** tab validate you can see your newly deployed Firewalls **(The deployment and bootstrapping process can take up to 10-15 minutes)**. If the Deployment was succesful you will see the following output in **Panorama -> Managed Devices -> Summary**
    
 ![Screenshot 2023-05-09 at 18 27 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf1f83d9-dd78-476f-a672-c879e00b9dfc)
 
