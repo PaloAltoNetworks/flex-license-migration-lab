@@ -13,11 +13,11 @@
   - [3.1 Login To Customer Support Portal](#31-login-to-customer-support-portal)
   - [3.2 Create Fixed Deployment Profiles](#32-create-fixed-deployment-profiles)
     - [3.2.1 Azure Deployment Profile](#321-azure-deployment-profile)
-    - [3.2.2 AWS Deployment Profile](#322-aws-deployment-profile)
-    - [3.2.3 GCP Deployment Profile](#323-gcp-deployment-profile)
   - [3.3 License Panorama](#33-license-panorama)
     - [3.3.1 Provision Panorama Serialnumber](#331-provision-panorama-serialnumber)
     - [3.3.2 License Panorama](#332-license-panorama)
+- [4. Deploy Firewalls](#4-deploy-firewalls)
+  - [4.2. Validate Deployment](#42-validate-deployment)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -42,18 +42,18 @@ The following Secanrios and Lab activies are covered
 1. Deploy a new Lab Panorama to fullfill the Migration process
 2. Configure Panorama to perform the Lab activities
 3. Setup the Customer support Portal (CSP)
+   1. Creating several Deployment Profiles
 4. Deploy Software Firewalls and License them with an ELA License
-   1. 2 Firewalls in AWS
-   2. 2 Firewalls in GCP
-   3. 2 Firewalls in Azure
-5. Onboard Firewalls into Panorama
-6. Migrate Software Firewalls from NON-Flex License Model to Flex-License Model
+   1. 2 Firewalls in PanOS 9.1.13-h3
+   2. 2 Firewalls in PanOS 10.0.9
+   3. 2 Firewalls in PanOS 10.2.3
+5. Migrate Software Firewalls from NON-Flex License Model to Flex-License Model
    1. NON-Flex to Flex-License (Fixed Deployment Profile)
    2. Flex-License to Flex-License (Flexible Deployment Profile)
-7. How to update the Deployment Profile
+6. How to update the Deployment Profile
    1. Enable/Disable CDSS
    2. Increase/Decrease vCPU count
-8. Troubleshooting
+7. Troubleshooting
 
 <br/>
 
@@ -128,30 +128,6 @@ Now you will create several Deployment Profiles in the Customer Support Portal t
    ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
 <br/>
 
-### 3.2.2 AWS Deployment Profile
-1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
-   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
-2. Select the following as shown on the picture below and click Next<br/>
-   ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
-3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "AWS-Fixed-[StudentName]"
-   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
-4. Click "Create Deployment Profile"
-5. Verify that your Deployment Profile is successfully created
-   ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
-<br/>
-
-### 3.2.3 GCP Deployment Profile
-1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
-   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
-2. Select the following as shown on the picture below and click Next<br/>
-   ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
-3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "GCP-Fixed-[StudentName]"
-   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
-4. Click "Create Deployment Profile"
-5. Verify that your Deployment Profile is successfully created
-   ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
-<br/>
-
 ## 3.3 License Panorama
 In the next steps you will create a Serialnumber for your previous created Panorama with the Flex License Credits
 
@@ -180,3 +156,105 @@ As next we will License your Panorama with the Serialnumber you created above.
 3. Hit OK and reload the UI. Check if a pending commit on the Panorama is needed. If yes, commit to Panorama.
 4. In the Panorama check if you can see a Serialnummber is associated to it
    ![Screenshot 2023-04-28 at 10 42 49](https://user-images.githubusercontent.com/30934288/235103168-d62230df-38c1-43e4-862d-7fb8c52a9d1a.png)
+
+# 4. Deploy Firewalls
+In the following chapter you will deploy several Software Firewalls in different PanOS version. The Software Firewalls will automatically join your previous created Panorama
+
+- Login to Azure Portal (https://portal.azure.com) and login with your Credentials
+- Download Terraform Code from GitHub
+- Modify Terraform Code
+- Execute Terraform Code
+- Validate Deployment in Azure Portal and Panorama
+
+1. Login in to Azure Portal (https://portal.azure.com) 
+![AzurePortal](https://user-images.githubusercontent.com/30934288/233334030-b7fb093a-5cec-4083-9779-3bf817b0c3ef.png)
+2. Open Azure Cloud Shell
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/AzureCLI.png)
+3. click on Create storage. In some case it will not create a Storage Account. In that case click in "Show advanced settings" and create your own storage account.
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/storagecli.png)
+4. Once the creation of the storage is completed you will see the following
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/cloudshell.png)
+5. Download Terraform Code from GitHub
+   1. in the Cloud shell execute the following command
+    ```
+    git clone https://github.com/PaloAltoNetworks/flex-license-migration-lab.git
+    ```
+    2. As output you will see the following
+    ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/clonerepo.png)
+6. Now browse to the deployment folder folder
+   ```
+   cd cd flex-license-migration-lab/azure/single\ firewall\ deployment/
+   ```
+7. Rename the ```terraform.tfvars.example``` to ```terraform.tfvars``` mv ./example.tfvars terraform.tfvars
+   <details>
+    <summary style="color:black">Expand For Details</summary>
+
+      **Command:**
+      ``` mv ./terraform.tfvars.example terraform.tfvars```
+  </details>
+8. Modify the ```terraform.tfvars``` inside Cloud shell with the ```vi``` command
+   1. Modify the following variables in the File.
+   
+   ```
+   resource_group_name     = "migration-[Studenname]" #replace [Studentname] with your Name
+   password                = "SecurePassWord12!!" #change the password. Use a complex password
+   storage_account_name    = "pantfstorage[Studenname]" #replace [Studentname] with your name in small letters without space
+   storage_share_name      = "bootstrapshare[Studenname]" #replace [Studentname] with your name in small letters without space
+
+   ```
+
+   new terraform.tfvars picture
+
+9.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
+10. As next switch to the folder ```files``` and rename the ```init-cfg.sample.txt``` to ```init-cfg.txt``` using the ```mv``` command
+11. Modify the ```init-cfg.txt``` inside Cloud shell with the ```vi``` command. Make sure you added the same name of the Device Group and Template Stack you created in your Panorama. 
+    
+  ```
+   type=dhcp-client
+   vm-auth-key=123456789012345
+   panorama-server=10.1.2.3
+   tplname=my-stack
+   dgname=my-device-group
+   dhcp-send-hostname=yes
+   dhcp-send-client-id=yes
+   dhcp-accept-server-hostname=yes
+   dhcp-accept-server-domain=yes
+  ```
+11. Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
+12. Move back to the ```vmseries_scaleset``` with the command ```cd..```
+13. Once you made all your changes execute the Terraform code with following commands:
+    1.  ```terraform init```.
+    2.  ```terraform plan```.
+    3.  ```terraform apply``` once you get the prompet type ```yes```
+
+**Important!** The complete deployment will take up to 30 Minutes after the completing the Terraform Apply. It is a good time for a break
+
+<details>
+  <summary style="color:black">Expand For Details</summary>
+
+  **Terraform Init**
+  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/init.png)
+
+  **Terraform Plan**
+  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/plan.png)
+
+  **Terraform Apply**
+  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/apply.png)
+
+</details>
+<br/>
+
+14.  Once the ```terraform apply``` is completed you will see the following output<br/>
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/Complete.png)
+
+## 4.2. Validate Deployment
+
+- Login into Panorama
+- Validate Deployment
+
+1.  Login into Panorama Public IP
+2.  Once you logged into the Panorama Navigate to the **Panorama** tab validate you can see your newly deployed Firewalls **(The deployment and bootstrapping process can take up to 30-45 minutes)**. If the Deployment was succesful you will see the following output in **Panorama -> Managed Devices -> Summary**
+   
+NEW PICTURE
+
+3. You succesfull deployed your Environment if you can see the above output
