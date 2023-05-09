@@ -4,17 +4,6 @@ resource "azurerm_resource_group" "this" {
   location = var.location
 }
 
-# Generate a random password for VM-Series.
-resource "random_password" "this" {
-  length           = 16
-  min_lower        = 16 - 4
-  min_numeric      = 1
-  min_special      = 1
-  min_upper        = 1
-  special          = true
-  override_special = "_%@"
-}
-
 # Virtual Network and its Network Security Group
 module "vnet" {
   source = "../modules/vnet"
@@ -48,6 +37,17 @@ module "vnet" {
   }
 }
 
+# The storage account for VM-Series initialization.
+module "bootstrap" {
+  source = "../modules/bootstrap"
+
+  location             = var.location
+  resource_group_name  = azurerm_resource_group.this.name
+  storage_account_name = var.storage_account_name
+  storage_share_name   = var.storage_share_name
+  files                = var.files
+}
+
 # The VM-Series virtual machine
 module "vmseries1" {
   source = "../modules/vmseries"
@@ -56,10 +56,17 @@ module "vmseries1" {
   resource_group_name = azurerm_resource_group.this.name
   name                = var.firewall1
   username            = var.username
-  password            = random_password.this.result
+  password            = var.password
   img_sku             = var.common_vmseries_sku
   img_version         = var.vm_series_version
   avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
   interfaces = [
     {
       name             = "myfw-mgmt"
@@ -76,10 +83,17 @@ module "vmseries2" {
   resource_group_name = azurerm_resource_group.this.name
   name                = var.firewall2
   username            = var.username
-  password            = random_password.this.result
+  password            = var.password
   img_sku             = var.common_vmseries_sku
   img_version         = var.vm_series_version
   avzones             = var.avzones
+  bootstrap_options = join(",",
+    [
+      "storage-account=${module.bootstrap.storage_account.name}",
+      "access-key=${module.bootstrap.storage_account.primary_access_key}",
+      "file-share=${module.bootstrap.storage_share.name}",
+      "share-directory=None"
+  ])
   interfaces = [
     {
       name             = "myfw-mgmt"
