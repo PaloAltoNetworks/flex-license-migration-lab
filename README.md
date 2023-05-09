@@ -203,7 +203,7 @@ In the following chapter you will deploy several Software Firewalls in different
 
    ```
 
-   new terraform.tfvars picture
+   ![Screenshot 2023-05-09 at 18 34 28](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/32b6cf09-c1db-45c8-a897-59cf25a9ef79)
 
 9.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
 10. As next switch to the folder ```files``` and rename the ```init-cfg.sample.txt``` to ```init-cfg.txt``` using the ```mv``` command
@@ -255,6 +255,6 @@ In the following chapter you will deploy several Software Firewalls in different
 1.  Login into Panorama Public IP
 2.  Once you logged into the Panorama Navigate to the **Panorama** tab validate you can see your newly deployed Firewalls **(The deployment and bootstrapping process can take up to 30-45 minutes)**. If the Deployment was succesful you will see the following output in **Panorama -> Managed Devices -> Summary**
    
-NEW PICTURE
+![Screenshot 2023-05-09 at 18 27 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf1f83d9-dd78-476f-a672-c879e00b9dfc)
 
 3. You succesfull deployed your Environment if you can see the above output
