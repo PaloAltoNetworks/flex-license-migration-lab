@@ -348,7 +348,9 @@ In the following section we will create a new Deployment Profile to migrate the 
     <details>
      <summary style="color:black">Expand For Details</summary>
       The Upgrade is not working because you chaning the VM capacity. You can only upgrade the Software Firewalls to the Flex Deployment profile when activating it directly on the VM and using the "Upgrade VM capacity" <br/>
-      ![Screenshot 2023-05-10 at 13 01 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cece0010-4ed4-4bbf-b27e-ad82f72f1ea4)
+      
+  ![Screenshot 2023-05-10 at 13 01 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cece0010-4ed4-4bbf-b27e-ad82f72f1ea4)
+  
     </details>
 <br/>
 
