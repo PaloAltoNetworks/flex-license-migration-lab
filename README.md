@@ -348,25 +348,25 @@ In the following section we will create a new Deployment Profile to migrate the 
     <details>
      <summary style="color:black">Expand For Details</summary>
       The Upgrade is not working because you chaning the VM capacity. You can only upgrade the Software Firewalls to the Flex Deployment profile when activating it directly on the VM and using the "Upgrade VM capacity"
-      FAILED PICTURE
+      ![Screenshot 2023-05-10 at 13 01 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cece0010-4ed4-4bbf-b27e-ad82f72f1ea4)
     </details>
 <br/>
 
 15. Before you can perform the License Key upgrade you have to install on the firewalls the License API Key. Follow the [instructions](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/install-a-license-deactivation-api-key) to perform the task. Repeat that 
 16. Repeat that step for Firewalls 3-6 
 17. Once you added the API go in your Panorama and switch the context to Firewall 3 or 4 (or PA-VM)
-    Picture
+    ![Screenshot 2023-05-10 at 13 02 30](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/341c7bad-d56c-46ce-81ea-3c876b09d2f4)
 18. In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
-    Picture
+    ![Screenshot 2023-05-10 at 13 04 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/090c5b34-30ee-4744-ab45-d5d24257e31f)
 19. In the window add under Authorization Code your atuh code and click Continue
-    Picture
-20. You will the below picture once it completed. Now refresh the UI
-    Picture
+    ![Screenshot 2023-05-10 at 13 05 53](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3c4d6afc-8c03-4a0b-9820-cdfeddadf64a)
+20. You will see the below outcome once it completed. Click close and refresh the UI
+    ![Screenshot 2023-05-10 at 13 18 38](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ac1d0226-d321-4ab3-9507-739d6a055179)
 21. In the Firewall switch to the Dashboard and you can see the VM License changed to VM-FLEX-4
-    Picture
+    ![Screenshot 2023-05-10 at 13 18 47](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ec2d2ff9-341d-4dec-8e21-3a3c25eef3ae)
 22. Repeat the same steps for the second firewall.
 23. When you know go to the Support Portal and check your profiles, you can see that the count of the Fixed prile is reduced by 2 firewalls and 8 vcpus and the Flex profile increased.
-    Picture
+    ![Screenshot 2023-05-10 at 13 24 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/f7bff680-846d-4595-8ae7-db53fde1fb1f)
 
 **Congratulations!!! You successful migrated 2 Firewalls from a Fixed License Deployment Profile to an Flexible Deployment profile and implemented the API License Key on the Firewalls**
 
