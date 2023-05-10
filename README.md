@@ -249,18 +249,18 @@ The value for the varibles ```tplname``` and ```dgname``` can be found in the se
     2.  ```terraform plan```.
     3.  ```terraform apply``` once you get the prompet type ```yes```
 
-**Important!** The complete deployment will take up to 10 Minutes after the completing the Terraform Apply. It is a good time for a break
+17. **Important!** The complete deployment will take up to 10 Minutes after the completing the Terraform Apply. It is a good time for a break
 
-**Terraform Init**
+18. **Terraform Init**<br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/init.png)
 
-**Terraform Plan** <br/>
+19. **Terraform Plan** <br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/plan.png)
 
-**Terraform Apply** <br/>
+20. **Terraform Apply** <br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/apply.png)
 
-1.    Once the ```terraform apply``` is completed you will see the following output<br/>
+21. Once the ```terraform apply``` is completed you will see the following output<br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/Complete.png)
 
 ## 4.3 Validate Deployment
@@ -275,7 +275,7 @@ The value for the varibles ```tplname``` and ```dgname``` can be found in the se
 
 3. You succesfull deployed your Environment if you can see the above output
 
-Congratulations you succesfully deployed several VM-Series Firewalls in different PanOS Version and bootstrapped them.
+**Congratulations you succesfully deployed several VM-Series Firewalls in different PanOS Version and bootstrapped them.**
 
 # 5 License Migration
 
