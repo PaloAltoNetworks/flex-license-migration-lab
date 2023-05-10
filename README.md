@@ -22,9 +22,10 @@
   - [4.3 Validate Deployment](#43-validate-deployment)
 - [5 License Migration](#5-license-migration)
   - [5.1 Covered Secanrios in Detail](#51-covered-secanrios-in-detail)
-  - [5.2 Migrate all Software Firewalls](#52-migrate-all-software-firewalls)
+  - [5.2 Migrate Software Firewalls](#52-migrate-software-firewalls)
     - [5.2.1 Initial Migration](#521-initial-migration)
     - [5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile](#522-migrate-panos-1009-to-flexible-deployment-profile)
+    - [5.2.3 Migrate PanOS 10.2.3 to Flexible Deployment Profile](#523-migrate-panos-1023-to-flexible-deployment-profile)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -292,10 +293,11 @@ In the following steps you will migrate the previous created from a NON-Flex Lic
 7.  Migrate one (1) Firewall with PanOS 10.2.3 from Flex to Flex with increasing the vCPU via Panorama
 
 
-## 5.2 Migrate all Software Firewalls
+## 5.2 Migrate Software Firewalls
 In the following section we will migrate now all Software Firewall from the NON-Flex license model to the Flex license model. For that we will use the Deployment profile fou created in the section [3.2 Create Fixed Deployment Profiles](#32-create-fixed-deployment-profiles).
 
 ### 5.2.1 Initial Migration
+In the following section you migrate all Software Firewalls from NON-Flex Licensing to Flex Licensing.
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
 2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
@@ -371,6 +373,28 @@ In the following section we will create a new Deployment Profile to migrate the 
 
 **Congratulations!!! You successful migrated 2 Firewalls from a Fixed License Deployment Profile to an Flexible Deployment profile and implemented the API License Key on the Firewalls**
 
+### 5.2.3 Migrate PanOS 10.2.3 to Flexible Deployment Profile
+In the following section we will create a new Deployment Profile to migrate the Software Firewalls from a Fixed Deployment Profile to a Flexible Deployment Profile
 
-
-
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+4. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+5. Select the following as shown on the picture below and click Next<br/>
+   ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a1877da0-2fab-451f-8452-77247429382f)
+6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-[StudentName]"**
+   NEW Picture
+7. Click "Create Deployment Profile"
+8. Verify that your Deployment Profile is successfully created
+   NEW Picture
+9. Now Copy the Auth Code of the newly created Deployment Profile
+10. As next Login in to your Panorama **https://[Public-IP]**
+11. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
+   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
+12. In the License window click at the bottom Activate
+   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
+13. Select now Firewall 5 and 6 or as in shown in the Picture. You can verify the Name of the firewalls in the Summary tab. Now type in **AUTH CODE** field the auth code and click **Activate**
+    Picture
+14. It will fail too because of the same issue you already faced above. Please set the API License Key on both firewalls and repeat the steps from above.
