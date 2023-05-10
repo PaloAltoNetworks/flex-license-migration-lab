@@ -24,7 +24,7 @@
   - [5.1 Covered Secanrios in Detail](#51-covered-secanrios-in-detail)
   - [5.2 Migrate all Software Firewalls](#52-migrate-all-software-firewalls)
     - [5.2.1 Initial Migration](#521-initial-migration)
-    - [5.2.2 Migrate PanOS 10.0.4 to Flexible Deployment Profile](#522-migrate-panos-1004-to-flexible-deployment-profile)
+    - [5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile](#522-migrate-panos-1009-to-flexible-deployment-profile)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -320,7 +320,7 @@ In the following section we will migrate now all Software Firewall from the NON-
 
 **Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
 
-### 5.2.2 Migrate PanOS 10.0.4 to Flexible Deployment Profile
+### 5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile
 In the following section we will create a new Deployment Profile to migrate the Software Firewalls from a Fixed Deployment Profile to a Flexible Deployment Profile
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
@@ -337,3 +337,39 @@ In the following section we will create a new Deployment Profile to migrate the 
 8. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a216a585-e1cf-4a30-8c6e-edcfe072e29e)
 9. Now Copy the Auth Code of the newly created Deployment Profile
+10. As next Login in to your Panorama **https://[Public-IP]**
+11. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
+   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
+12. In the License window click at the bottom Activate
+   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
+13. Select now Firewall 3 and 4 or as in shown in the Picture the firewalls with the name "PA-VM". You can verify the Name of the firewalls in the Summary tab. Now type in **AUTH CODE** field the auth code and click **Activate**
+    Picture
+14. Are the upgrade is working? If no, Why?
+    <details>
+     <summary style="color:black">Expand For Details</summary>
+      The Upgrade is not working because you chaning the VM capacity. You can only upgrade the Software Firewalls to the Flex Deployment profile when activating it directly on the VM and using the "Upgrade VM capacity"
+      FAILED PICTURE
+    </details>
+<br/>
+
+15. Before you can perform the License Key upgrade you have to install on the firewalls the License API Key. Follow the [instructions](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/install-a-license-deactivation-api-key) to perform the task. Repeat that 
+16. Repeat that step for Firewalls 3-6 
+17. Once you added the API go in your Panorama and switch the context to Firewall 3 or 4 (or PA-VM)
+    Picture
+18. In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
+    Picture
+19. In the window add under Authorization Code your atuh code and click Continue
+    Picture
+20. You will the below picture once it completed. Now refresh the UI
+    Picture
+21. In the Firewall switch to the Dashboard and you can see the VM License changed to VM-FLEX-4
+    Picture
+22. Repeat the same steps for the second firewall.
+23. When you know go to the Support Portal and check your profiles, you can see that the count of the Fixed prile is reduced by 2 firewalls and 8 vcpus and the Flex profile increased.
+    Picture
+
+**Congratulations!!! You successful migrated 2 Firewalls from a Fixed License Deployment Profile to an Flexible Deployment profile and implemented the API License Key on the Firewalls**
+
+
+
+
