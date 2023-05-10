@@ -24,7 +24,7 @@
   - [5.1 Covered Secanrios in Detail](#51-covered-secanrios-in-detail)
   - [5.2 Migrate all Software Firewalls](#52-migrate-all-software-firewalls)
     - [5.2.1 Initial Migration](#521-initial-migration)
-    - [5.2.2 Next](#522-next)
+    - [5.2.2 Migrate PanOS 10.0.4 to Flexible Deployment Profile](#522-migrate-panos-1004-to-flexible-deployment-profile)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -320,4 +320,20 @@ In the following section we will migrate now all Software Firewall from the NON-
 
 **Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
 
-### 5.2.2 Next
+### 5.2.2 Migrate PanOS 10.0.4 to Flexible Deployment Profile
+In the following section we will create a new Deployment Profile to migrate the Software Firewalls from a Fixed Deployment Profile to a Flexible Deployment Profile
+
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+4. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+5. Select the following as shown on the picture below and click Next<br/>
+   NEW PIC
+6. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
+   NEW PIC
+7. Click "Create Deployment Profile"
+8. Verify that your Deployment Profile is successfully created
+   NEW Pic
+<br/>
