@@ -336,4 +336,4 @@ In the following section we will create a new Deployment Profile to migrate the 
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a216a585-e1cf-4a30-8c6e-edcfe072e29e)
-<br/>
+9. Now Copy the Auth Code of the newly created Deployment Profile
