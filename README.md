@@ -330,10 +330,10 @@ In the following section we will create a new Deployment Profile to migrate the 
 4. On the Prisma NFGW Credits Pool click on Create Deployment Profile
    ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
 5. Select the following as shown on the picture below and click Next<br/>
-   NEW PIC
-6. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
-   NEW PIC
+   ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a1877da0-2fab-451f-8452-77247429382f)
+6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
+   ![Screenshot 2023-05-10 at 11 02 13](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d3531517-b4d7-42be-865d-da66f87b54ce)
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
-   NEW Pic
+   ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a216a585-e1cf-4a30-8c6e-edcfe072e29e)
 <br/>
