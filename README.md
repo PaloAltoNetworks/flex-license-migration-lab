@@ -21,7 +21,10 @@
   - [4.2 Deployment](#42-deployment)
   - [4.3 Validate Deployment](#43-validate-deployment)
 - [5 License Migration](#5-license-migration)
-  - [Covered Secanrios in Detail](#covered-secanrios-in-detail)
+  - [5.1 Covered Secanrios in Detail](#51-covered-secanrios-in-detail)
+  - [5.2 Migrate all Software Firewalls](#52-migrate-all-software-firewalls)
+    - [5.2.1 Initial Migration](#521-initial-migration)
+    - [5.2.2 Next](#522-next)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -125,7 +128,7 @@ Now you will create one Deployment Profile in the Customer Support Portal.
    ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
 2. Select the following as shown on the picture below and click Next<br/>
    ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
-3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "Migration-Lab-Fixed-[StudentName]"
+3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with **"Migration-Lab-Fixed-[StudentName]"**
    ![Screenshot 2023-05-10 at 08 41 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b2e24f33-710a-4cd2-ae04-fe15a1c7b592)
 4. Click "Create Deployment Profile"
 5. Verify that your Deployment Profile is successfully created
@@ -278,13 +281,43 @@ Congratulations you succesfully deployed several VM-Series Firewalls in differen
 
 In the following steps you will migrate the previous created from a NON-Flex License model to the Flex-License model. You will do several migrations and create/update some Deployment profiles to fulfill the activities.
 
-## Covered Secanrios in Detail
+## 5.1 Covered Secanrios in Detail
 
-1.  Migrate one (1) Firewall with PanOS 9.1.13-h3 to Fixed License via Panorama
-2.  Migrate one (1) Firewall with PanOS 10.0.9 to Fixed License via Panorama
-3.  Migrate one (1) Firewall with PanOS 10.0.9 from Fixed License to Flex via Panorama
-4.  Migrate one (1) Firewall with PanOS 10.2.3 to Fixed License via Panorama
-5.  Migrate one (1) Firewall with PanOS 10.2.3 from Fixed License to Flex via Panorama
-6.  Migrate one (1) Firewall with PanOS 10.2.3 from Flex to Flex with increasing the vCPU via Panorama
+1.  Migrate all Software Firewall to Flex License model (Fixed Deployment Profile) via Panorama
+2.  Migrate one (1) Firewall with PanOS 9.1.13-h3 to Fixed License via Panorama
+3.  Migrate one (1) Firewall with PanOS 10.0.9 to Fixed License via Panorama
+4.  Migrate one (1) Firewall with PanOS 10.0.9 from Fixed License to Flex via Panorama
+5.  Migrate one (1) Firewall with PanOS 10.2.3 to Fixed License via Panorama
+6.  Migrate one (1) Firewall with PanOS 10.2.3 from Fixed License to Flex via Panorama
+7.  Migrate one (1) Firewall with PanOS 10.2.3 from Flex to Flex with increasing the vCPU via Panorama
 
 
+## 5.2 Migrate all Software Firewalls
+In the following section we will migrate now all Software Firewall from the NON-Flex license model to the Flex license model. For that we will use the Deployment profile fou created in the section [3.2 Create Fixed Deployment Profiles](#32-create-fixed-deployment-profiles).
+
+### 5.2.1 Initial Migration
+
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+3.  On the Support Portal Page on the left side go to Assets -> Software NGFW Credits -> Details
+   ![Screenshot 2023-05-08 at 13 57 29](https://user-images.githubusercontent.com/30934288/236821175-3277edbc-d472-4e9f-b428-1831ba25b73b.png)
+4. Now Search for your previous created Azure Deployment Profile [Here](#32-create-fixed-deployment-profiles)
+5. Now Copy the Auth Code of your Profile.
+   New Picture
+6. As next Login in to your Panorama **https://[Public-IP]**
+7. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
+   picture
+8. In the License window click at the bottom Activate
+   picture
+9. In the opened Window select now all available Firewalls and type in **AUTH CODE** field the auth code and click **Activate**
+    picture
+10. The Migration process will now take several minutes. 
+11. Once Migration is completed you will see the following outcome
+    picture
+12. As next check on the CSP if your credits got consumed from your deployment profile. You should see the below outcome
+    picture
+
+**Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
+
+### 5.2.2 Next
