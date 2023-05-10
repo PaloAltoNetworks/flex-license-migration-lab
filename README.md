@@ -15,7 +15,10 @@
     - [3.2.1 Azure Deployment Profile](#321-azure-deployment-profile)
   - [3.3 License Panorama](#33-license-panorama)
     - [3.3.1 Provision Panorama Serialnumber](#331-provision-panorama-serialnumber)
-    - [3.3.2 License Panorama / Create Device Group and Template](#332-license-panorama--create-device-group-and-template)
+    - [3.3.2 Configure Panorama](#332-configure-panorama)
+      - [3.3.2.1 License Panorama](#3321-license-panorama)
+      - [3.3.2.2 Create Device Group and Device Template](#3322-create-device-group-and-device-template)
+      - [3.3.2.3 Base config of the Device Template](#3323-base-config-of-the-device-template)
 - [4. Deploy Firewalls in Azure](#4-deploy-firewalls-in-azure)
   - [4.1 What you will do?](#41-what-you-will-do)
   - [4.2 Deployment](#42-deployment)
@@ -155,19 +158,38 @@ In the next steps you will create a Serialnumber for your previous created Panor
    ![Screenshot 2023-05-08 at 14 06 13](https://user-images.githubusercontent.com/30934288/236821362-29f37909-874f-44ce-8f5a-8976f2d6c735.png)
 8. You can close the window by clicking **Cancel**
 
-### 3.3.2 License Panorama / Create Device Group and Template
-As next we will License your Panorama with the Serialnumber you created above and create a new Decive Group and Template inside your new Panorama.
+### 3.3.2 Configure Panorama
+As next we will License your Panorama with the Serialnumber you created above and create a new Decive Group and Template inside your new Panorama and do some basic configuration in your Device Template
 
+#### 3.3.2.1 License Panorama
 1. Login to your Panorama https://[Public-IP]
 2. Copy the the Serialnummber you create on the CSP Portal and enter it under the Panorama Tab -> Setup -> Management -> General Settings
    ![Screenshot 2023-05-03 at 10 40 41](https://user-images.githubusercontent.com/30934288/235870102-b21ae1db-3df3-451e-b97d-177fb0aac110.png)
 3. Hit OK and reload the UI. Check if a pending commit on the Panorama is needed. If yes, commit to Panorama.
 4. In the Panorama check if you can see a Serialnummber is associated to it
    ![Screenshot 2023-04-28 at 10 42 49](https://user-images.githubusercontent.com/30934288/235103168-d62230df-38c1-43e4-862d-7fb8c52a9d1a.png)
-5. As next Create a Device Group, Template, and Template Stack. See the picture below as example
+
+#### 3.3.2.2 Create Device Group and Device Template
+1. As next Create a Device Group, Template, and Template Stack. See the picture below as example
    ![Screenshot 2023-04-28 at 10 44 34](https://user-images.githubusercontent.com/30934288/235103331-a855e378-c39d-473a-8a74-3e3b51f60fec.png)
    ![Screenshot 2023-04-28 at 10 44 48](https://user-images.githubusercontent.com/30934288/235103377-2ab1e849-4f35-4208-a429-628d6516bd13.png)
-6. Once you done it commit your changes to the Panorama
+2. Once you done it commit your changes to the Panorama
+
+#### 3.3.2.3 Base config of the Device Template
+1. In the Panorama navigate to Device and select under Template your previous create Template (my example Stundent-TP)
+   Picture
+2. In your Template to on left side to Setup -> Service and click on the wheel.
+   Picture
+3. In the Services tab type 8.8.8.8 under Primary DNS Server
+   Picture
+4. As next click on the NTP tab and provide an NTP server from your region (my example 0.de.pool.ntp.org)
+   Picture
+5. Click Ok once you entert it
+6. As next click on the left panel on Dynamic Updates
+7. Change the settings as shown in the picture below
+   Picture
+8. At the end commit your changes to the Panorama
+   Picture
 
 # 4. Deploy Firewalls in Azure 
 In the following chapter you will deploy several Software Firewalls in different PanOS version. The Software Firewalls will automatically join your previous created Panorama
