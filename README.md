@@ -16,8 +16,12 @@
   - [3.3 License Panorama](#33-license-panorama)
     - [3.3.1 Provision Panorama Serialnumber](#331-provision-panorama-serialnumber)
     - [3.3.2 License Panorama / Create Device Group and Template](#332-license-panorama--create-device-group-and-template)
-- [4. Deploy Firewalls](#4-deploy-firewalls)
-  - [4.2. Validate Deployment](#42-validate-deployment)
+- [4. Deploy Firewalls in Azure](#4-deploy-firewalls-in-azure)
+  - [4.1 What you will do?](#41-what-you-will-do)
+  - [4.2 Deployment](#42-deployment)
+  - [4.3 Validate Deployment](#43-validate-deployment)
+- [5 License Migration](#5-license-migration)
+  - [Covered Secanrios in Detail](#covered-secanrios-in-detail)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -105,7 +109,7 @@ Congratulations!! You have succesfully deploye a Panorama in Microsoft Azure.
 <br/>
 
 # 3. Customer Support Portal
-In the following Lab section we will go to the Customer support portal (CSP) to create several Deployment Profiles to perform the Migration from NON-Flex license model Flex License Model
+In the following Lab section we will go to the Customer support portal (CSP) to create your first Deployment Profiles. This is needed for the intial Migration and generating a Serialnumber for the Panorama
 
 ## 3.1 Login To Customer Support Portal
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
@@ -114,15 +118,15 @@ In the following Lab section we will go to the Customer support portal (CSP) to 
 3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
 
 ## 3.2 Create Fixed Deployment Profiles
-Now you will create several Deployment Profiles in the Customer Support Portal to cover the migration process from NON-Flex to Flex (Fixed Deployment Profile).
+Now you will create one Deployment Profile in the Customer Support Portal.
 
 ### 3.2.1 Azure Deployment Profile
 1. On the Prisma NFGW Credits Pool click on Create Deployment Profile
    ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
 2. Select the following as shown on the picture below and click Next<br/>
    ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
-3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "Azure-Fixed-[StudentName]"
-   ![Screenshot 2023-04-28 at 10 37 12](https://user-images.githubusercontent.com/30934288/235103752-1f1c0959-87a5-4654-bb76-03d472fad2b6.png)
+3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with "Migration-Lab-Fixed-[StudentName]"
+   NEW PICTURE
 4. Click "Create Deployment Profile"
 5. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
@@ -161,14 +165,17 @@ As next we will License your Panorama with the Serialnumber you created above an
    ![Screenshot 2023-04-28 at 10 44 48](https://user-images.githubusercontent.com/30934288/235103377-2ab1e849-4f35-4208-a429-628d6516bd13.png)
 6. Once you done it commit your changes to the Panorama
 
-# 4. Deploy Firewalls
+# 4. Deploy Firewalls in Azure 
 In the following chapter you will deploy several Software Firewalls in different PanOS version. The Software Firewalls will automatically join your previous created Panorama
 
+## 4.1 What you will do?
 - Login to Azure Portal (https://portal.azure.com) and login with your Credentials
 - Download Terraform Code from GitHub
 - Modify Terraform Code
 - Execute Terraform Code
 - Validate Deployment in Azure Portal and Panorama
+
+## 4.2 Deployment
 
 1. Login in to Azure Portal (https://portal.azure.com) 
 ![AzurePortal](https://user-images.githubusercontent.com/30934288/233334030-b7fb093a-5cec-4083-9779-3bf817b0c3ef.png)
@@ -241,25 +248,19 @@ The value for the varibles ```tplname``` and ```dgname``` can be found in the se
 
 **Important!** The complete deployment will take up to 10 Minutes after the completing the Terraform Apply. It is a good time for a break
 
-<details>
-  <summary style="color:black">Expand For Details</summary>
+**Terraform Init**
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/init.png)
 
-  **Terraform Init**
-  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/init.png)
+**Terraform Plan** <br/>
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/plan.png)
 
-  **Terraform Plan**
-  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/plan.png)
+**Terraform Apply** <br/>
+![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/apply.png)
 
-  **Terraform Apply**
-  ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/apply.png)
-
-</details>
-<br/>
-
-17.  Once the ```terraform apply``` is completed you will see the following output<br/>
+1.    Once the ```terraform apply``` is completed you will see the following output<br/>
 ![](https://raw.githubusercontent.com/PaloAltoNetworks/Azure_Training/main/Azure_Autoscaling_Lab/Images/Complete.png)
 
-## 4.2. Validate Deployment
+## 4.3 Validate Deployment
 
 - Login into Panorama
 - Validate Deployment
@@ -270,3 +271,20 @@ The value for the varibles ```tplname``` and ```dgname``` can be found in the se
 ![Screenshot 2023-05-09 at 18 27 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf1f83d9-dd78-476f-a672-c879e00b9dfc)
 
 3. You succesfull deployed your Environment if you can see the above output
+
+Congratulations you succesfully deployed several VM-Series Firewalls in different PanOS Version and bootstrapped them.
+
+# 5 License Migration
+
+In the following steps you will migrate the previous created from a NON-Flex License model to the Flex-License model. You will do several migrations and create/update some Deployment profiles to fulfill the activities.
+
+## Covered Secanrios in Detail
+
+1.  Migrate one (1) Firewall with PanOS 9.1.13-h3 to Fixed License via Panorama
+2.  Migrate one (1) Firewall with PanOS 10.0.9 to Fixed License via Panorama
+3.  Migrate one (1) Firewall with PanOS 10.0.9 from Fixed License to Flex via Panorama
+4.  Migrate one (1) Firewall with PanOS 10.2.3 to Fixed License via Panorama
+5.  Migrate one (1) Firewall with PanOS 10.2.3 from Fixed License to Flex via Panorama
+6.  Migrate one (1) Firewall with PanOS 10.2.3 from Flex to Flex with increasing the vCPU via Panorama
+
+
