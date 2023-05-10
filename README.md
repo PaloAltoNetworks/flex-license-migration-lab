@@ -304,19 +304,19 @@ In the following section we will migrate now all Software Firewall from the NON-
    ![Screenshot 2023-05-08 at 13 57 29](https://user-images.githubusercontent.com/30934288/236821175-3277edbc-d472-4e9f-b428-1831ba25b73b.png)
 4. Now Search for your previous created Azure Deployment Profile [Here](#32-create-fixed-deployment-profiles)
 5. Now Copy the Auth Code of your Profile.
-   New Picture
+  ![Screenshot 2023-05-10 at 08 55 41](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ec8b6b2e-c07a-41a4-ab36-2673cb6ae9dc)
 6. As next Login in to your Panorama **https://[Public-IP]**
 7. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
-   picture
+   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
 8. In the License window click at the bottom Activate
-   picture
+   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
 9. In the opened Window select now all available Firewalls and type in **AUTH CODE** field the auth code and click **Activate**
-    picture
+    ![Screenshot 2023-05-10 at 09 04 13](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/57ba35f5-23bc-4f23-ac86-b3b025691fb2)
 10. The Migration process will now take several minutes. 
 11. Once Migration is completed you will see the following outcome
-    picture
+    ![Screenshot 2023-05-10 at 09 07 12](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/af45c54b-3b08-4fb0-9a6a-d843dcd1f2ec)
 12. As next check on the CSP if your credits got consumed from your deployment profile. You should see the below outcome
-    picture
+    ![Screenshot 2023-05-10 at 09 10 04](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/df6bcf8f-69ee-4969-9cce-cc75d97115fd)
 
 **Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
 
