@@ -176,20 +176,20 @@ As next we will License your Panorama with the Serialnumber you created above an
 2. Once you done it commit your changes to the Panorama
 
 #### 3.3.2.3 Base config of the Device Template
-1. In the Panorama navigate to Device and select under Template your previous create Template (my example Stundent-TP)
-   Picture
-2. In your Template to on left side to Setup -> Service and click on the wheel.
-   Picture
+1. In the Panorama navigate to **Device** and select under Template your previous create Template (my example Stundent-TP)
+   ![Screenshot 2023-05-10 at 14 50 48](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf799365-416f-40e6-8093-715c9b715a61)
+2. In your Template click on **Select -> Service** and click on the wheel.
+   ![Screenshot 2023-05-10 at 14 52 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d6e5523e-2e08-4e27-bcad-fe4c9736192a)
 3. In the Services tab type 8.8.8.8 under Primary DNS Server
-   Picture
+   ![Screenshot 2023-05-10 at 14 53 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e6ebf52c-45ca-41bb-912f-73fd671437a8)
 4. As next click on the NTP tab and provide an NTP server from your region (my example 0.de.pool.ntp.org)
-   Picture
+   ![Screenshot 2023-05-10 at 14 40 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d500d6f9-ac11-4e7f-b3da-a55783cecc7e)
 5. Click Ok once you entert it
-6. As next click on the left panel on Dynamic Updates
+6. As next click on the left panel on **Dynamic Updates**
 7. Change the settings as shown in the picture below
-   Picture
+   ![Screenshot 2023-05-10 at 14 29 05](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3a20634b-14d7-40f7-bc59-49b4b8ca3b21)
 8. At the end commit your changes to the Panorama
-   Picture
+   ![Screenshot 2023-05-10 at 14 47 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/1e6dff87-141d-41e8-8af3-7849e5a73939)
 
 # 4. Deploy Firewalls in Azure 
 In the following chapter you will deploy several Software Firewalls in different PanOS version. The Software Firewalls will automatically join your previous created Panorama
