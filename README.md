@@ -356,7 +356,7 @@ In the following section we will create a new Deployment Profile to migrate the 
 5. Select the following as shown on the picture below and click Next<br/>
    ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a1877da0-2fab-451f-8452-77247429382f)
 6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
-   ![Screenshot 2023-05-10 at 11 02 13](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d3531517-b4d7-42be-865d-da66f87b54ce)
+   ![Screenshot 2023-05-11 at 09 29 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/634bfc97-1bc9-4c4d-82d0-d733be28d76e)
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a216a585-e1cf-4a30-8c6e-edcfe072e29e)
