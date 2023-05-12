@@ -80,7 +80,7 @@ For this workshop you will create a first a Panorama before we deploy the Softwa
 1. In Cloud Shell execute the following command but change before the values [StudentRGName] and [Location]
    Available Regions are: **North Europe, East US, UK South, UAE North, Australia Central**
    ```
-   az group create --name [StudentRGName] --location [Location]
+   az group create --name [StudentRGName] --location [Location] --tags Workshop-DeleteMe
    ```
 2. The Output should looks like the following
 ![Screenshot 2023-04-26 at 16 34 21](https://user-images.githubusercontent.com/30934288/234610062-a2b082b9-22b8-430b-949e-26ac35bc28bf.png)
