@@ -400,23 +400,23 @@ In the following section we will create a new Deployment Profile to migrate the 
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
 2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
-   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/fce312fd-44a3-4eac-ba39-e21c7a1387ba)
 3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
 4. On the Prisma NFGW Credits Pool click on Create Deployment Profile
-   ![Screenshot 2023-04-28 at 10 34 00](https://user-images.githubusercontent.com/30934288/235103582-e0457306-91e1-41f7-9810-89e2e684e9df.png)
+![Screenshot 2023-04-28 at 10 34 00](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/4d2a4572-d374-4c70-a014-5eda836b02b1)
 5. Select the following as shown on the picture below and click Next<br/>
-   ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a1877da0-2fab-451f-8452-77247429382f)
+![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3004ee1b-9861-48bd-98bf-ec546b4ee632)
 6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-[StudentName]"**
-   ![Screenshot 2023-05-10 at 14 05 47](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/14afeaef-ba0b-42f0-8b3a-f7faf7b4660a)
+![Screenshot 2023-05-10 at 14 05 47](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/54ac21f9-2645-4cb6-ae09-e9795e23e92d)
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
-   ![Screenshot 2023-05-10 at 14 06 25](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5a498d91-863b-4b86-a9ba-2ddd508d0725)
+![Screenshot 2023-05-10 at 14 06 25](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/02e29ade-a09e-4f4d-a0c0-798d43f6410a)
 9. Now Copy the Auth Code of the newly created Deployment Profile
 10. As next Login in to your Panorama **https://[Public-IP]**
 11. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
-   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
+![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/14fd4221-d1cf-459a-8c98-de94dc47b6c9)
 12. In the License window click at the bottom Activate
-   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
+![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8683d515-db29-47a3-993a-79455cf84972)
 13. Select now Firewall 5 and 6 or as in shown in the Picture. You can verify the Name of the firewalls in the Summary tab. Now type in **AUTH CODE** field the auth code and click **Activate**
-    ![Screenshot 2023-05-10 at 14 17 35](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7c661312-2e49-4f7c-92e4-16f53b787aac)
+![Screenshot 2023-05-10 at 14 17 35](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d9c8cd41-8306-4219-ac08-a8278ec35b6f)
 14. It will fail too because of the same issue you already faced above. Please set the API License Key on both firewalls and repeat the steps from above.
