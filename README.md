@@ -356,18 +356,18 @@ In the following section we will create a new Deployment Profile to migrate the 
 5. Select the following as shown on the picture below and click Next<br/>
 ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5d87a3a2-8ec7-4b82-865c-1bd6a34f5571)
 6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
-   ![Screenshot 2023-05-11 at 09 29 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/634bfc97-1bc9-4c4d-82d0-d733be28d76e)
+![Screenshot 2023-05-11 at 09 29 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ce900d6d-d414-49ce-ac4d-a96d41486525)
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
-   ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/a216a585-e1cf-4a30-8c6e-edcfe072e29e)
+![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/c186ff26-3d67-4b52-83ab-f6a2c6197abd)
 9. Now Copy the Auth Code of the newly created Deployment Profile
 10. As next Login in to your Panorama **https://[Public-IP]**
 11. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
-   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
+![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7bafaf76-c150-4ec3-b304-f86999438207)
 12. In the License window click at the bottom Activate
-   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
+![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/65383526-90e9-4094-a9b1-57b14af315fe)
 13. Select now Firewall 3 and 4 or as in shown in the Picture the firewalls with the name "PA-VM". You can verify the Name of the firewalls in the Summary tab. Now type in **AUTH CODE** field the auth code and click **Activate**
-    ![Screenshot 2023-05-10 at 14 08 34](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/9bd87a8b-74e6-4189-97bb-7150e948cb0c)
+![Screenshot 2023-05-10 at 14 08 34](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/77a96993-e7e2-4b89-804e-b18a0aa15780)
 14. Are the upgrade is working? If no, Why?
     <details>
      <summary style="color:black">Expand For Details</summary>
@@ -380,18 +380,18 @@ In the following section we will create a new Deployment Profile to migrate the 
 15. Before you can perform the License Key upgrade you have to install on the firewalls the License API Key. Follow the [instructions](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/install-a-license-deactivation-api-key) to perform the task. Repeat that 
 16. Repeat that step for Firewalls 3-6 
 17. Once you added the API go in your Panorama and switch the context to Firewall 3 or 4 (or PA-VM)
-    ![Screenshot 2023-05-10 at 13 02 30](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/341c7bad-d56c-46ce-81ea-3c876b09d2f4)
+![Screenshot 2023-05-10 at 13 02 30](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/1067a8ae-248d-491c-994b-c397c67c5454)
 18. In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
-    ![Screenshot 2023-05-10 at 13 04 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/090c5b34-30ee-4744-ab45-d5d24257e31f)
+![Screenshot 2023-05-10 at 13 04 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/0f59af49-5d9c-47dd-b432-8ceab28ee9a2)
 19. In the window add under Authorization Code your atuh code and click Continue
-    ![Screenshot 2023-05-10 at 13 05 53](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3c4d6afc-8c03-4a0b-9820-cdfeddadf64a)
+![Screenshot 2023-05-10 at 13 05 53](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/15043178-5001-4c05-8072-f1ca6a6ccb86)
 20. You will see the below outcome once it completed. Click close and refresh the UI
-    ![Screenshot 2023-05-10 at 13 18 38](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ac1d0226-d321-4ab3-9507-739d6a055179)
+![Screenshot 2023-05-10 at 13 18 38](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/101058af-6897-42ea-8f20-5bf6893b5879)
 21. In the Firewall switch to the Dashboard and you can see the VM License changed to VM-FLEX-4
-    ![Screenshot 2023-05-10 at 13 18 47](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ec2d2ff9-341d-4dec-8e21-3a3c25eef3ae)
+![Screenshot 2023-05-10 at 13 18 47](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/42cb3810-1e08-45e1-8cec-e716efefc618)
 22. Repeat the same steps for the second firewall.
 23. When you know go to the Support Portal and check your profiles, you can see that the count of the Fixed prile is reduced by 2 firewalls and 8 vcpus and the Flex profile increased.
-    ![Screenshot 2023-05-10 at 13 24 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/f7bff680-846d-4595-8ae7-db53fde1fb1f)
+![Screenshot 2023-05-10 at 13 24 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/2e01b3f4-0cf3-46e6-8a9c-07e3db8302fe)
 
 **Congratulations!!! You successful migrated 2 Firewalls from a Fixed License Deployment Profile to an Flexible Deployment profile and implemented the API License Key on the Firewalls**
 
