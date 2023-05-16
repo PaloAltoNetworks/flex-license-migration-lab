@@ -32,6 +32,7 @@
   - [5.3 Change vCPU on PanOS 10.2.3 Firewall](#53-change-vcpu-on-panos-1023-firewall)
   - [5.4 Change/Update Deployment Profiles](#54-changeupdate-deployment-profiles)
     - [5.4.1 Add Security Subscriptions](#541-add-security-subscriptions)
+    - [5.4.2 Remove Security Subscriptions](#542-remove-security-subscriptions)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -503,5 +504,5 @@ Picture
 
 **Congratulations!!! You successful Updated your Deployment Profile and added another Security subscription**
 
-
+### 5.4.2 Remove Security Subscriptions
 
