@@ -240,7 +240,7 @@ In the following chapter you will deploy several Software Firewalls in different
 
    ```
 
-   ![Screenshot 2023-05-09 at 18 34 28](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/32b6cf09-c1db-45c8-a897-59cf25a9ef79)
+![Screenshot 2023-05-09 at 18 34 28](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e5adbe2e-5b65-4f3c-a67a-50f48b6c7b36)
 
 9.  Save your changes by pressing ```ESC``` and type ```:wq!``` and ENTER
 10. As next switch to the folder ```files``` and rename the ```init-cfg.sample.txt``` to ```init-cfg.txt``` using the ```mv``` command
@@ -294,7 +294,7 @@ The value for the varibles ```tplname``` and ```dgname``` can be found in the se
 1.  Login into Panorama Public IP
 2.  Once you logged into the Panorama Navigate to the **Panorama** tab validate you can see your newly deployed Firewalls **(The deployment and bootstrapping process can take up to 10-15 minutes)**. If the Deployment was succesful you will see the following output in **Panorama -> Managed Devices -> Summary**
    
-![Screenshot 2023-05-09 at 18 27 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf1f83d9-dd78-476f-a672-c879e00b9dfc)
+![Screenshot 2023-05-09 at 18 27 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/af39f08f-f237-45dd-a8d8-58751e1ee5f9)
 
 3. You succesfull deployed your Environment if you can see the above output
 
@@ -331,16 +331,16 @@ In the following section you migrate all Software Firewalls from NON-Flex Licens
   ![Screenshot 2023-05-10 at 08 55 41](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b9ac5d40-27d6-4ed4-87cc-35cfaafff550)
 6. As next Login in to your Panorama **https://[Public-IP]**
 7. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
-   ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
+![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8f1bc08f-1b78-40de-b396-fe2650c7ed64)
 8. In the License window click at the bottom Activate
-   ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/845a9613-c0e8-45f2-8cf0-4aa079acbee5)
+![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/be7bba7e-1efd-4b9a-9b25-134ffd93af8c)
 9. In the opened Window select now all available Firewalls and type in **AUTH CODE** field the auth code and click **Activate**
-    ![Screenshot 2023-05-10 at 09 04 13](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/57ba35f5-23bc-4f23-ac86-b3b025691fb2)
+![Screenshot 2023-05-10 at 09 04 13](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d4cea55e-36b6-4ab6-87d4-a49c4391de15)
 10. The Migration process will now take several minutes. 
 11. Once Migration is completed you will see the following outcome
-    ![Screenshot 2023-05-10 at 09 07 12](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/af45c54b-3b08-4fb0-9a6a-d843dcd1f2ec)
+![Screenshot 2023-05-10 at 09 07 12](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/dd623b84-a7dc-425f-a2e5-9c39d55d6d2c)
 12. As next check on the CSP if your credits got consumed from your deployment profile. You should see the below outcome
-    ![Screenshot 2023-05-10 at 09 10 04](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/df6bcf8f-69ee-4969-9cce-cc75d97115fd)
+![Screenshot 2023-05-10 at 09 10 04](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/bbee137d-b328-433c-b7f1-3475434d619a)
 
 **Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
 
