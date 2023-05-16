@@ -486,5 +486,20 @@ In the following section you will now update your Deployment Profile (**"Migrati
    Picture
 6. Click **YES** in the new Window
    NEW Picture
-7. 
+7. As next Login to your Panorama
+8. In Your Panorama navigate to **Panorama -> Device Deployment -> Licenses**
+![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7bafaf76-c150-4ec3-b304-f86999438207)
+9. Select **Refresh**
+Picture <br/>
+10. Now Select the firewall who was associated with the Auth Code of the **"Migration-Lab-Flex-10.2-[StudentName]"** Deployment Profile (In the Example is it Firewall 5) and click **Refresh**
+    Picture
+11. You should see the following output if it was successfull
+    Picture
+12. Refresh the Panorama UI
+13. Now you should see that on Software Firewall 5 is the Global Protect License Active
+Picture
+
+**Congratulations!!! You successful Updated your Deployment Profile and added another Security subscription**
+
+
 
