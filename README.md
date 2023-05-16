@@ -323,12 +323,12 @@ In the following section you migrate all Software Firewalls from NON-Flex Licens
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
 2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
-   ![Screenshot 2023-04-28 at 10 27 55](https://user-images.githubusercontent.com/30934288/235103488-dec40a3b-8b52-4e86-b47f-63a5ea94399e.png)
+   ![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/0de4e869-00cf-4510-b1f7-bd648604b044)
 3.  On the Support Portal Page on the left side go to Assets -> Software NGFW Credits -> Details
-   ![Screenshot 2023-05-08 at 13 57 29](https://user-images.githubusercontent.com/30934288/236821175-3277edbc-d472-4e9f-b428-1831ba25b73b.png)
+   ![Screenshot 2023-05-08 at 13 57 29](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/f77f90d9-cad1-4e9b-b46d-1bcbf1f8063c)
 4. Now Search for your previous created Azure Deployment Profile [Here](#32-create-fixed-deployment-profiles)
 5. Now Copy the Auth Code of your Profile.
-  ![Screenshot 2023-05-10 at 08 55 41](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ec8b6b2e-c07a-41a4-ab36-2673cb6ae9dc)
+  ![Screenshot 2023-05-10 at 08 55 41](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b9ac5d40-27d6-4ed4-87cc-35cfaafff550)
 6. As next Login in to your Panorama **https://[Public-IP]**
 7. **In Your Panorama navigate to Panorama -> Device Deployment -> Licenses**
    ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/837950e2-0d0b-4ee6-9008-2f61898020ee)
