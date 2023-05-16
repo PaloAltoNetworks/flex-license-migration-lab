@@ -177,19 +177,19 @@ As next we will License your Panorama with the Serialnumber you created above an
 
 #### 3.3.2.3 Base config of the Device Template
 1. In the Panorama navigate to **Device** and select under Template your previous create Template (my example Stundent-TP)
-   ![Screenshot 2023-05-10 at 14 50 48](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cf799365-416f-40e6-8093-715c9b715a61)
+   ![Screenshot 2023-05-10 at 14 50 48](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7959a7f0-74a6-4ec4-8690-ace440b101f8)
 2. In your Template click on **Select -> Service** and click on the wheel.
-   ![Screenshot 2023-05-10 at 14 52 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d6e5523e-2e08-4e27-bcad-fe4c9736192a)
+![Screenshot 2023-05-10 at 14 52 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b66eaecf-1712-455b-8500-f31fe78b63bb)
 3. In the Services tab type 8.8.8.8 under Primary DNS Server
-   ![Screenshot 2023-05-10 at 14 53 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e6ebf52c-45ca-41bb-912f-73fd671437a8)
+![Screenshot 2023-05-10 at 14 53 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e96d8204-d429-4797-8b5b-93f5ce0735ea)
 4. As next click on the NTP tab and provide an NTP server from your region (my example 0.de.pool.ntp.org)
-   ![Screenshot 2023-05-10 at 14 40 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d500d6f9-ac11-4e7f-b3da-a55783cecc7e)
+![Screenshot 2023-05-10 at 14 40 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7da1da9e-90ea-489a-9e39-d718d4b49426)
 5. Click Ok once you entert it
 6. As next click on the left panel on **Dynamic Updates**
 7. Change the settings as shown in the picture below
-   ![Screenshot 2023-05-10 at 14 29 05](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3a20634b-14d7-40f7-bc59-49b4b8ca3b21)
+![Screenshot 2023-05-10 at 14 29 05](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b071dd6b-9042-4ac4-be68-0b36ceb9ac33)
 8. At the end commit your changes to the Panorama
-   ![Screenshot 2023-05-10 at 14 47 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/1e6dff87-141d-41e8-8af3-7849e5a73939)
+![Screenshot 2023-05-10 at 14 47 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/64afd8a0-d08d-40cd-82cc-fe0de3fe0787)
 
 # 4. Deploy Firewalls in Azure 
 In the following chapter you will deploy several Software Firewalls in different PanOS version. The Software Firewalls will automatically join your previous created Panorama
