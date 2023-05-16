@@ -467,6 +467,7 @@ In the following section we will create a new Deployment Profile to change the v
 NEW PICTURE
 
 <br/>
+
 **Congratulations!!! You successful migrated 1 Software Firewalls from Flexible Deployment Profile with 4 vCPU's to a Flexible Deployment Profile and changed the Cores count via CLI**
 
 
