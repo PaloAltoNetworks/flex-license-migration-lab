@@ -29,6 +29,7 @@
     - [5.2.1 Initial Migration](#521-initial-migration)
     - [5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile](#522-migrate-panos-1009-to-flexible-deployment-profile)
     - [5.2.3 Migrate PanOS 10.2.3 to Flexible Deployment Profile](#523-migrate-panos-1023-to-flexible-deployment-profile)
+    - [5.2.4 Change vCPU on PanOS 10.2.3 Firewall](#524-change-vcpu-on-panos-1023-firewall)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -419,4 +420,35 @@ In the following section we will create a new Deployment Profile to migrate the 
 ![Screenshot 2023-05-10 at 09 01 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8683d515-db29-47a3-993a-79455cf84972)
 13. Select now Firewall 5 and 6 or as in shown in the Picture. You can verify the Name of the firewalls in the Summary tab. Now type in **AUTH CODE** field the auth code and click **Activate**
 ![Screenshot 2023-05-10 at 14 17 35](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d9c8cd41-8306-4219-ac08-a8278ec35b6f)
-14. It will fail too because of the same issue you already faced above. Please set the API License Key on both firewalls and repeat the steps from above.
+14. It will fail too because of the same issue you already faced above. Please follow the same instructions from the previous chapter to migrate the firewalls to Flexible Deployment profile.
+
+### 5.2.4 Change vCPU on PanOS 10.2.3 Firewall
+In the following section we will create a new Deployment Profile to change the vCPU on the already licensed Software Firewall
+
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/fce312fd-44a3-4eac-ba39-e21c7a1387ba)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+4. On the Prisma NFGW Credits Pool click on Create Deployment Profile
+![Screenshot 2023-04-28 at 10 34 00](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/4d2a4572-d374-4c70-a014-5eda836b02b1)
+5. Select the following as shown on the picture below and click Next<br/>
+![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3004ee1b-9861-48bd-98bf-ec546b4ee632)
+6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"**
+new Picture
+7. Click "Create Deployment Profile"
+8. Verify that your Deployment Profile is successfully created
+   new picture
+9. Verify at first that both software Firewalls (5 and 6) are migrated to the new Flexible Deployment Profile. Check the Firewall Dashboard if you can see (VM-Series-4)
+new picture
+10. As next login to Firewall 5 or 6 via ssh. In my Example i migrate Firewall 6
+    ```ssh -oHostKeyAlgorithms=+ssh-rsa USERNAME@FIREWALL IP```
+11. In the CLI type the following command to set the Core value to 3
+    ```request plugins vm_series set-cores cores 3```
+    Picture
+12. The requires a reboot. Type the following command to rebbot the Firewall
+    ```request restart system```
+    Picture
+13. The Rebbot of the firewall will take now around ~ 5 Minutes
+14. Once the Firewall is back online and function login via GUI (Panorama or Firewall)
+15. 
+
