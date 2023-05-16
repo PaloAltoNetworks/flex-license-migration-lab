@@ -433,7 +433,7 @@ In the following section we will create a new Deployment Profile to change the v
 ![Screenshot 2023-04-28 at 10 34 00](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/4d2a4572-d374-4c70-a014-5eda836b02b1)
 5. Select the following as shown on the picture below and click Next <br/>
 ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3004ee1b-9861-48bd-98bf-ec546b4ee632)
-6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"**
+6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"** <br/>
 <img width="589" alt="Screenshot 2023-05-16 at 11 02 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e176f5d4-b38c-49b4-a035-318ca2996fdb"> <br/>
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
