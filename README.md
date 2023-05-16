@@ -460,9 +460,12 @@ In the following section we will create a new Deployment Profile to change the v
 15.  In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
 ![Screenshot 2023-05-10 at 13 04 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/0f59af49-5d9c-47dd-b432-8ceab28ee9a2)
 16.   In the window add under Authorization Code your auth code (3 vCPU) and click Continue
+![Screenshot 2023-05-10 at 13 05 53](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/15043178-5001-4c05-8072-f1ca6a6ccb86)
 17.   You will see the below outcome once it completed. Click close and refresh the UI
 NEW PICTURE
-18.   In the Firewall switch to the Dashboard and you can see the VM License changed to VM-FLEX-4
+18.    In the Firewall go to the Dashboard and you can see the VM License changed to VM-FLEX-3
 NEW PICTURE
+
+**Congratulations!!! You successful migrated 1 Software Firewalls from Flexible Deployment Profile with 4 vCPU's to a Flexible Deployment Profile and changed the Cores count via CLI ***
 
 
