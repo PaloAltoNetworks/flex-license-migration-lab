@@ -463,8 +463,8 @@ In the following section we will create a new Deployment Profile to change the v
 ![Screenshot 2023-05-10 at 13 05 53](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/15043178-5001-4c05-8072-f1ca6a6ccb86)
 17.   You will see the below outcome once it completed. Click close and refresh the UI
 ![Screenshot 2023-05-16 at 12 54 19](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/dea24352-b34d-4a92-8748-b63a31d4359e)
-18.    In the Firewall go to the Dashboard and you can see the VM License changed to VM-FLEX-3
-NEW PICTURE
+18.    In the Firewall go to the Dashboard and you can see the VM License changed to **VM-FLEX-3** <br/>
+![Screenshot 2023-05-16 at 13 04 32](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e5fe26c1-98e8-430e-b77e-4f9599f521ae)
 
 <br/>
 
