@@ -343,7 +343,7 @@ In the following section you migrate all Software Firewalls from NON-Flex Licens
 12. As next check on the CSP if your credits got consumed from your deployment profile. You should see the below outcome
 ![Screenshot 2023-05-10 at 09 10 04](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/bbee137d-b328-433c-b7f1-3475434d619a)
 
-**Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Dlex License model (Fixed Deployment Profile) via Panorama**
+**Congratulations!!! You Migrated successful all your Software Firewalls from a NON-Flex license model to Flex License model (Fixed Deployment Profile) via Panorama**
 
 ### 5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile
 In the following section we will create a new Deployment Profile to migrate the Software Firewalls from a Fixed Deployment Profile to a Flexible Deployment Profile
