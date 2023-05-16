@@ -133,7 +133,7 @@ Now you will create one Deployment Profile in the Customer Support Portal.
 2. Select the following as shown on the picture below and click Next<br/>
    ![Screenshot 2023-04-28 at 10 35 37](https://user-images.githubusercontent.com/30934288/235103668-d6dca65f-7ad0-420f-89dc-4fdb0adadc14.png)
 3. In the Deployment Profile use the following and replace Instructor-Lab under "Profile Name" with **"Migration-Lab-Fixed-[StudentName]"**
-   ![Screenshot 2023-05-10 at 08 41 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/b2e24f33-710a-4cd2-ae04-fe15a1c7b592)
+   ![Screenshot 2023-05-10 at 08 41 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/65eef85b-a8d6-4f33-9a4c-647df9195397)
 4. Click "Create Deployment Profile"
 5. Verify that your Deployment Profile is successfully created
    ![Screenshot 2023-04-28 at 10 40 09](https://user-images.githubusercontent.com/30934288/235103850-9cd1b2d9-f585-436a-bb9a-97c1d21a9b39.png)
