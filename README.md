@@ -29,7 +29,9 @@
     - [5.2.1 Initial Migration](#521-initial-migration)
     - [5.2.2 Migrate PanOS 10.0.9 to Flexible Deployment Profile](#522-migrate-panos-1009-to-flexible-deployment-profile)
     - [5.2.3 Migrate PanOS 10.2.3 to Flexible Deployment Profile](#523-migrate-panos-1023-to-flexible-deployment-profile)
-    - [5.2.4 Change vCPU on PanOS 10.2.3 Firewall](#524-change-vcpu-on-panos-1023-firewall)
+  - [5.3 Change vCPU on PanOS 10.2.3 Firewall](#53-change-vcpu-on-panos-1023-firewall)
+  - [5.4 Change/Update Deployment Profiles](#54-changeupdate-deployment-profiles)
+    - [5.4.1 Add Security Subscriptions](#541-add-security-subscriptions)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -422,7 +424,7 @@ In the following section we will create a new Deployment Profile to migrate the 
 ![Screenshot 2023-05-10 at 14 17 35](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/d9c8cd41-8306-4219-ac08-a8278ec35b6f)
 14. It will fail too because of the same issue you already faced above. Please follow the same instructions from the previous chapter to migrate the firewalls to Flexible Deployment profile.
 
-### 5.2.4 Change vCPU on PanOS 10.2.3 Firewall
+## 5.3 Change vCPU on PanOS 10.2.3 Firewall
 In the following section we will create a new Deployment Profile to change the vCPU on the already licensed Software Firewall
 
 1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
@@ -470,4 +472,19 @@ In the following section we will create a new Deployment Profile to change the v
 
 **Congratulations!!! You successful migrated 1 Software Firewalls from Flexible Deployment Profile with 4 vCPU's to a Flexible Deployment Profile and changed the Cores count via CLI**
 
+## 5.4 Change/Update Deployment Profiles
+In the following section you will now update your Deployment Profile (**"Migration-Lab-Flex-10.2-[StudentName]"**) too remove some Subscription and enable subscriptions
+
+### 5.4.1 Add Security Subscriptions
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/fce312fd-44a3-4eac-ba39-e21c7a1387ba)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+4. Go to youe Deployment Profile **"Migration-Lab-Flex-10.2-[StudentName]"**
+   Picture
+5. In your Deployment Profile select the Global Protect
+   Picture
+6. Click **YES** in the new Window
+   NEW Picture
+7. 
 
