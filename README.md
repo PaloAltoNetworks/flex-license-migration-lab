@@ -383,8 +383,8 @@ In the following section we will create a new Deployment Profile to migrate the 
     </details>
 <br/>
 
-15. Before you can perform the License Key upgrade you have to install on the firewalls the License API Key. Follow the [instructions](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/install-a-license-deactivation-api-key) to perform the task. Repeat that 
-16. Repeat that step for Firewalls 3-6 
+15. Before you can perform the License Key upgrade you have to install on the **Software Firewalls** the License API Key. Follow the [instructions](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/install-a-license-deactivation-api-key) to perform the task. Repeat that 
+16. Install API License Key on **ALL** other Software Firewalls (1-6) too for future tasks
 17. Once you added the API go in your Panorama and switch the context to Firewall 3 or 4 (or PA-VM)
 ![Screenshot 2023-05-10 at 13 02 30](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/1067a8ae-248d-491c-994b-c397c67c5454)
 18. In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
