@@ -486,21 +486,22 @@ In the following section you will now update your Deployment Profile (**"Migrati
 4. Go to youe Deployment Profile **"Migration-Lab-Flex-10.2-[StudentName]"** click in the three dots and **Edit Profile**
    <img width="919" alt="Screenshot 2023-05-16 at 16 35 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/dfccd5d1-237a-454f-be7f-5c668b813a8e">
 5. In your Deployment Profile select the Global Protect and Click **Update Deployment Profile**
-   <img width="591" alt="Screenshot 2023-05-16 at 15 48 24" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/c76835a6-1544-498c-ae0f-0ad66dcda180">
+   ![Screenshot 2023-05-16 at 15 48 24](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/c76835a6-1544-498c-ae0f-0ad66dcda180)
 6. Click **YES** in the new Window
-   <img width="416" alt="Screenshot 2023-05-16 at 15 49 27" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e59669a7-b464-48d1-8adb-cbd458938dad">
+   ![Screenshot 2023-05-16 at 15 49 27](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e59669a7-b464-48d1-8adb-cbd458938dad)
 7. As next Login to your Panorama
 8. In Your Panorama navigate to **Panorama -> Device Deployment -> Licenses**
 ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7bafaf76-c150-4ec3-b304-f86999438207)
 9. Select **Refresh**  <br/>
-<img width="399" alt="Screenshot 2023-05-16 at 16 02 12" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/75c75845-9f2b-4835-abf1-f00b49f355c9">
+![Screenshot 2023-05-16 at 16 02 12](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/75c75845-9f2b-4835-abf1-f00b49f355c9)
+
 10. Now Select the firewall who was associated with the Auth Code of the **"Migration-Lab-Flex-10.2-[StudentName]"** Deployment Profile (In the Example is it Firewall 5) and click **Refresh**
-    <img width="1003" alt="Screenshot 2023-05-16 at 16 04 09" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/84580d86-d466-444b-bec3-81b8b9904a56">
+![Screenshot 2023-05-16 at 16 04 09](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/84580d86-d466-444b-bec3-81b8b9904a56)
 11. You should see the following output if it was successfull
-<img width="802" alt="Screenshot 2023-05-16 at 16 04 33" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/2de0adb3-64c6-435b-9f57-f9b5cacebe00">
+![Screenshot 2023-05-16 at 16 04 33](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/2de0adb3-64c6-435b-9f57-f9b5cacebe00)
 12. Refresh the Panorama UI
 13. Now you should see that on Software Firewall 5 is the Global Protect License Active
-<img width="1227" alt="Screenshot 2023-05-16 at 16 06 31" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/607d2b7f-d823-4b35-bdb1-ff21b60481de">
+![Screenshot 2023-05-16 at 16 06 31](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/607d2b7f-d823-4b35-bdb1-ff21b60481de)
 
 **Congratulations!!! You successful Updated your Deployment Profile and added another Security subscription**
 
