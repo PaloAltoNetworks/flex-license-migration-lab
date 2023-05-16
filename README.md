@@ -359,7 +359,7 @@ In the following section we will create a new Deployment Profile to migrate the 
 5. Select the following as shown on the picture below and click Next<br/>
 ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5d87a3a2-8ec7-4b82-865c-1bd6a34f5571)
 6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-[StudentName]"**
-![Screenshot 2023-05-11 at 09 29 57](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ce900d6d-d414-49ce-ac4d-a96d41486525)
+![Screenshot 2023-05-16 at 15 56 52](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/79173b80-0618-4d0f-8031-26da6bf6ea89)
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
 ![Screenshot 2023-05-10 at 11 06 15](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/c186ff26-3d67-4b52-83ab-f6a2c6197abd)
@@ -376,7 +376,9 @@ In the following section we will create a new Deployment Profile to migrate the 
      <summary style="color:black">Expand For Details</summary>
       The Upgrade is not working because you chaning the VM capacity. You can only upgrade the Software Firewalls to the Flex Deployment profile when activating it directly on the VM and using the "Upgrade VM capacity" <br/>
       
-      ![Screenshot 2023-05-10 at 13 01 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/cece0010-4ed4-4bbf-b27e-ad82f72f1ea4)
+      ![Screenshot 2023-05-10 at 13 01 11](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e093a80c-1d6c-47d6-91f4-8702140a9759)
+
+
     </details>
 <br/>
 
