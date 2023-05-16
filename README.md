@@ -437,18 +437,18 @@ In the following section we will create a new Deployment Profile to change the v
 <img width="589" alt="Screenshot 2023-05-16 at 11 02 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e176f5d4-b38c-49b4-a035-318ca2996fdb"> <br/>
 7. Click "Create Deployment Profile"
 8. Verify that your Deployment Profile is successfully created
-<img width="883" alt="Screenshot 2023-05-16 at 11 08 43" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5068f1cd-0f88-41b2-9f0a-932843dc8edb">
-9. Verify at first that both software Firewalls (5 and 6) are migrated to the new Flexible Deployment Profile. Check the Firewall Dashboard if you can see (VM-Series-4)
-<img width="470" alt="Screenshot 2023-05-16 at 11 22 52" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8632f9a7-bceb-4687-bd13-c1d9db533376">
+<img width="883" alt="Screenshot 2023-05-16 at 11 08 43" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5068f1cd-0f88-41b2-9f0a-932843dc8edb"> <br/>
+9. Verify at first that both software Firewalls (5 and 6) are migrated to the new Flexible Deployment Profile. Check the Firewall Dashboard if you can see (VM-Series-4) <br/>
+<img width="470" alt="Screenshot 2023-05-16 at 11 22 52" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8632f9a7-bceb-4687-bd13-c1d9db533376"> <br/>
 10. As next login to Firewall 5 or 6 via ssh. In my Example i migrate Firewall 6 <br/>
-    ```ssh -oHostKeyAlgorithms=+ssh-rsa USERNAME@FIREWALL IP```
+    ```ssh -oHostKeyAlgorithms=+ssh-rsa USERNAME@FIREWALL IP``` <br/>
 11. In the CLI type the following command to set the Core value to 3 <br/>
-    ```request plugins vm_series set-cores cores 3```
-<img width="874" alt="Screenshot 2023-05-16 at 11 28 34" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/031eb1b2-3b46-4c0b-8cf0-fda8ba3f228b">
+    ```request plugins vm_series set-cores cores 3``` <br/>
+<img width="874" alt="Screenshot 2023-05-16 at 11 28 34" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/031eb1b2-3b46-4c0b-8cf0-fda8ba3f228b"> <br/>
 12. The requires a reboot. Type the following command to rebbot the Firewall <br/>
-    ```request restart system```
-<img width="682" alt="Screenshot 2023-05-16 at 11 31 33" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/eee63a0d-dc19-4ae5-a9d9-86e0a91b1ede">
-13. The Rebbot of the firewall will take now around ~ 5 Minutes
-14. Once the Firewall is back online and function login via GUI (Panorama or Firewall)
-15. 
+    ```request restart system``` <br/>
+<img width="682" alt="Screenshot 2023-05-16 at 11 31 33" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/eee63a0d-dc19-4ae5-a9d9-86e0a91b1ede"> <br/>
+13. The Rebbot of the firewall will take now around ~ 5 Minutes <br/>
+14. Once the Firewall is back online and function login via GUI (Panorama or Firewall) <br/>
+
 
