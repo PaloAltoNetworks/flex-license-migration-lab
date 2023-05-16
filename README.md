@@ -458,7 +458,7 @@ In the following section we will create a new Deployment Profile to change the v
 13.  The Reboot of the firewall will take now around ~ 5 Minutes <br/>
 14.  Once the Firewall is back online and function login to the Firewall via  Panorama or directly to the Firewall
 15.  In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
-NEW Picture
+![Screenshot 2023-05-10 at 13 04 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/0f59af49-5d9c-47dd-b432-8ceab28ee9a2)
 16.   In the window add under Authorization Code your auth code (3 vCPU) and click Continue
 17.   You will see the below outcome once it completed. Click close and refresh the UI
 NEW PICTURE
