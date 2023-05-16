@@ -434,21 +434,35 @@ In the following section we will create a new Deployment Profile to change the v
 5. Select the following as shown on the picture below and click Next <br/>
 ![Screenshot 2023-05-10 at 11 00 39](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/3004ee1b-9861-48bd-98bf-ec546b4ee632)
 6. In the Deployment Profile use the following and use the NAME under "Profile Name" with **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"** <br/>
-<img width="589" alt="Screenshot 2023-05-16 at 11 02 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e176f5d4-b38c-49b4-a035-318ca2996fdb"> <br/>
+<img width="589" alt="Screenshot 2023-05-16 at 11 02 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e176f5d4-b38c-49b4-a035-318ca2996fdb">
+
 7. Click "Create Deployment Profile"
+
 8. Verify that your Deployment Profile is successfully created
-<img width="883" alt="Screenshot 2023-05-16 at 11 08 43" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5068f1cd-0f88-41b2-9f0a-932843dc8edb"> <br/>
+<img width="883" alt="Screenshot 2023-05-16 at 11 08 43" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5068f1cd-0f88-41b2-9f0a-932843dc8edb">
+
 9. Verify at first that both software Firewalls (5 and 6) are migrated to the new Flexible Deployment Profile. Check the Firewall Dashboard if you can see (VM-Series-4) <br/>
-<img width="470" alt="Screenshot 2023-05-16 at 11 22 52" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8632f9a7-bceb-4687-bd13-c1d9db533376"> <br/>
-10. As next login to Firewall 5 or 6 via ssh. In my Example i migrate Firewall 6 <br/>
-    ```ssh -oHostKeyAlgorithms=+ssh-rsa USERNAME@FIREWALL IP``` <br/>
-11. In the CLI type the following command to set the Core value to 3 <br/>
+<img width="470" alt="Screenshot 2023-05-16 at 11 22 52" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/8632f9a7-bceb-4687-bd13-c1d9db533376">
+
+10.  As next login to Firewall 5 or 6 via ssh. In my Example i migrate Firewall 6 <br/>
+    ```ssh -oHostKeyAlgorithms=+ssh-rsa USERNAME@FIREWALL IP```
+
+11.  In the CLI type the following command to set the Core value to 3 <br/>
     ```request plugins vm_series set-cores cores 3``` <br/>
-<img width="874" alt="Screenshot 2023-05-16 at 11 28 34" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/031eb1b2-3b46-4c0b-8cf0-fda8ba3f228b"> <br/>
-12. The requires a reboot. Type the following command to rebbot the Firewall <br/>
+<img width="874" alt="Screenshot 2023-05-16 at 11 28 34" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/031eb1b2-3b46-4c0b-8cf0-fda8ba3f228b">
+
+12.  The requires a reboot. Type the following command to rebbot the Firewall <br/>
     ```request restart system``` <br/>
 <img width="682" alt="Screenshot 2023-05-16 at 11 31 33" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/eee63a0d-dc19-4ae5-a9d9-86e0a91b1ede"> <br/>
-13. The Rebbot of the firewall will take now around ~ 5 Minutes <br/>
-14. Once the Firewall is back online and function login via GUI (Panorama or Firewall) <br/>
+
+13.  The Reboot of the firewall will take now around ~ 5 Minutes <br/>
+14.  Once the Firewall is back online and function login to the Firewall via  Panorama or directly to the Firewall
+15.  In the Firewall navigate **Device -> License** and click on **Upgrade VM capacity**
+NEW Picture
+16.   In the window add under Authorization Code your auth code (3 vCPU) and click Continue
+17.   You will see the below outcome once it completed. Click close and refresh the UI
+NEW PICTURE
+18.   In the Firewall switch to the Dashboard and you can see the VM License changed to VM-FLEX-4
+NEW PICTURE
 
 
