@@ -507,3 +507,21 @@ In the following section you will now update your Deployment Profile (**"Migrati
 
 ### 5.4.2 Remove Security Subscriptions
 
+1. Login with your PANW Credentials at the Customer Support Portal https://support.paloaltonetworks.com/
+2. In the Support Portal Change the Account Seletor to 132205 - Palo Alto Networks - Professional Services
+![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/fce312fd-44a3-4eac-ba39-e21c7a1387ba)
+3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
+4. Go to youe Deployment Profile **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"** click in the three dots and **Edit Profile**
+ NEW PIC
+5. In your Deployment Profile de-select the DNSt and Click **Update Deployment Profile**
+NEW PIC
+6. Click **YES** in the new Window
+![Screenshot 2023-05-16 at 15 49 27](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e59669a7-b464-48d1-8adb-cbd458938dad)
+7. As next Login to your Panorama
+8. In Your Panorama navigate to **Panorama -> Device Deployment -> Licenses**
+![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7bafaf76-c150-4ec3-b304-f86999438207)
+9. Select **Refresh**
+10. Now Select the Firewall who is associated with the Update Auth Code.
+11. Are the Update working?
+
+
