@@ -527,6 +527,8 @@ In the following section you will now update your Deployment Profile (**"Migrati
 <img width="1005" alt="Screenshot 2023-05-17 at 11 00 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/2c757fbb-6014-403b-80c9-88261baeddd8">
 
 11. Are the Update working?
-12. If You complete the migration show your Instructor the succesfull output of the Panorama or Firewall.
+12. If everything Worked you have to refresh the UI. In some cases it will show you an error but when you check the Panorama you can see the DNS license got removed or is listed as expired
+PICTURE
+13. asd
 
 
