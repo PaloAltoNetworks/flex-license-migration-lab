@@ -528,7 +528,8 @@ In the following section you will now update your Deployment Profile (**"Migrati
 
 11. Are the Update working?
 12. If everything Worked you have to refresh the UI. In some cases it will show you an error but when you check the Panorama you can see the DNS license got removed or is listed as expired
-PICTURE
-13. asd
+<img width="1221" alt="Screenshot 2023-05-17 at 11 42 57" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/ddd7f7f9-38fe-4b0a-887c-4ff4869a39c7">
+
+**Congratulations!!! You successful Updated your Deployment Profile and removed a Security subscription**
 
 
