@@ -33,6 +33,10 @@
   - [5.4 Change/Update Deployment Profiles](#54-changeupdate-deployment-profiles)
     - [5.4.1 Add Security Subscriptions](#541-add-security-subscriptions)
     - [5.4.2 Remove Security Subscriptions](#542-remove-security-subscriptions)
+- [6 Lab Clean Up](#6-lab-clean-up)
+  - [6.1 Remove Firewall Ressource Group](#61-remove-firewall-ressource-group)
+  - [6.2 Remove Panorama Ressource Group](#62-remove-panorama-ressource-group)
+  - [6.3 Remove Deployment Profiles](#63-remove-deployment-profiles)
 
 
 # 1. Palo Alto Networks Professional Service Flex Licensing Migration Lab
@@ -533,3 +537,11 @@ In the following section you will now update your Deployment Profile (**"Migrati
 **Congratulations!!! You successful Updated your Deployment Profile and removed a Security subscription**
 
 
+# 6 Lab Clean Up
+In the following Section you will Clean UP your Lab environment. This includes the removing ot the Azure Ressource Group (Panorama and Firewall) and deleting the Deployment Profiles in the CSP Account
+
+## 6.1 Remove Firewall Ressource Group
+
+## 6.2 Remove Panorama Ressource Group
+
+## 6.3 Remove Deployment Profiles
