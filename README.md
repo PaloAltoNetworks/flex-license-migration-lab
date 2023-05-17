@@ -512,9 +512,9 @@ In the following section you will now update your Deployment Profile (**"Migrati
 ![Screenshot 2023-04-28 at 10 27 55](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/fce312fd-44a3-4eac-ba39-e21c7a1387ba)
 3. On the Support Portal Page on the left side go to Assets -> Software NGFW Credits
 4. Go to youe Deployment Profile **"Migration-Lab-Flex-10.2-3vcpu-[StudentName]"** click in the three dots and **Edit Profile**
- NEW PIC
+<img width="916" alt="Screenshot 2023-05-17 at 10 54 42" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/5399b54f-d78e-42ac-a83c-a03d35c06db7">
 5. In your Deployment Profile de-select the DNSt and Click **Update Deployment Profile**
-NEW PIC
+<img width="554" alt="Screenshot 2023-05-17 at 10 54 53" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7c8767f9-f74c-4410-ad5d-f5a6508d1ffa">
 6. Click **YES** in the new Window
 ![Screenshot 2023-05-16 at 15 49 27](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/e59669a7-b464-48d1-8adb-cbd458938dad)
 7. As next Login to your Panorama
@@ -522,6 +522,8 @@ NEW PIC
 ![Screenshot 2023-05-10 at 08 58 44](https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/7bafaf76-c150-4ec3-b304-f86999438207)
 9. Select **Refresh**
 10. Now Select the Firewall who is associated with the Update Auth Code.
+<img width="1005" alt="Screenshot 2023-05-17 at 11 00 58" src="https://github.com/PaloAltoNetworks/flex-license-migration-lab/assets/30934288/2c757fbb-6014-403b-80c9-88261baeddd8">
 11. Are the Update working?
+12. If You complete the migration show your Instructor the succesfull output of the Panorama or Firewall.
 
 
