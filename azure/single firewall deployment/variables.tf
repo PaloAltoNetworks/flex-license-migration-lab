@@ -100,3 +100,9 @@ variable "firewall5" {
 variable "firewall6" {
   default = "Firewall6"
 }
+
+variable "tags" {
+  description = "Azure tags to apply to the created cloud resources. A map, for example `{ team = \"NetAdmin\", costcenter = \"CIO42\" }`"
+  default     = {}
+  type        = map(string)
+}

@@ -26,3 +26,4 @@ files = {
   "files/init-cfg.txt" = "config/init-cfg.txt"
 }
 
+tags = {"Owner"="Workshop-DeleteMe"} # Do not Change or Remove
